@@ -1,0 +1,92 @@
+List Structure
+washOptionNames
+washOptionPrices
+
+Main Structure
+scanMembership
+displayWashOptions
+selectWashOption
+payForWash
+generateReceipt
+performCarWash
+
+1) START
+
+2) Initialize washOptionNames as a list containing 'Basic', 'Clean', 'Super Clean'
+3) Initialize washOptionPrices as a list containing 5.50, 8.75, 12.50
+4) Initialize selectedWashOptionName
+5) Initialize selectedWashOptionPrice
+6) Initialize receipt
+7) Initialize isMember
+8) Initialize washCount
+
+9) scanMembership(): 
+	a) Scan for stick-on barcode chip 
+	b) if chip detected: 
+		- isMember = true 
+		- Retrieve member details and set washCount 
+		- return true 
+	c) else: 
+		- isMember = false 
+		- return false 
+
+10) displayWashOptions(): 
+	a) print "Available Car Wash Options:"   
+	b) for i from 0 to 2 step 1: 
+		- print "Option:", washOptionNames[i], "Price: $", washOptionPrices[i] 
+
+11) selectWashOption(): 
+	a) displayWashOptions() 
+	b) print "Please select a wash option:"   
+	c) userInput -> selectedWashOptionName   
+	d) for i from 0 to 2 step 1:   
+		- if washOptionNames[i] == selectedWashOptionName:   
+			- selectedWashOptionPrice = washOptionPrices[i] 
+			- return true 
+
+12) payForWash(): 
+	a) print "Your selected option costs: $", selectedWashOptionPrice   
+	b) print "Please make a credit card payment:" 
+	c) userInput -> paymentStatus   
+	d) if paymentStatus == "success":   
+		- generateReceipt()   
+		- print "Thank You! Payment successful. Proceeding to car wash."   
+		- return true   
+	e) else:   
+		- print "Sorry, Payment failed. Cannot proceed."   
+		- return false 
+
+13) generateReceipt(): 
+	a) receipt = "Receipt: " + selectedWashOptionName + " - $" + str(selectedWashOptionPrice)   
+	b) print receipt 
+
+14) performCarWash(): 
+	a) print "Performing", selectedWashOptionName, "car wash."   
+	b) print "Car wash complete. Thank You :)" 
+
+15) Main Process:
+	a) if scanMembership(): 
+		- if washCount < 2: 
+			- if selectWashOption(): 
+				- performCarWash() 
+				- Increment washCount 
+ 			- else: 
+				- print "Invalid wash option. Exiting. Try Again Please." 
+        	- else: 
+            		- if selectWashOption(): 
+                		- if payForWash(): 
+                    			- performCarWash() 
+                		- else: 
+                    			- print "Unable to proceed with car wash due to failed payment." 
+            		- else: 
+                		- print "Invalid wash option. Exiting. Try Again Please." 
+	b) else: 
+        	- if selectWashOption(): 
+            		- if payForWash(): 
+                		- performCarWash()
+            		- else: 
+                		- print "Unable to proceed with car wash due to failed payment." 
+        	- else: 
+            		- print "Invalid wash option. Exiting. Try Again Please." 
+
+16) END

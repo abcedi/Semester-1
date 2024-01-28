@@ -1,0 +1,72 @@
+Main Process: 
+
+1. Begin Main
+    - Print "Welcome to A La Carte Entertainment Complex" 
+    - Input "Do you want to pre-order? (Yes/No): " to preOrderChoice 
+    - If preOrderChoice is "Yes":
+        - Input "Enter email for order creation: " to userEmail 
+        - confirmed = Call PreOrder(userEmail) 
+        - If confirmed: 
+            - Call OnSiteActivities() 
+        - Else: 
+            - Print "Order not confirmed. Exiting." 
+        - EndIf 
+    - Else If preOrderChoice is "No": 
+        - Call OnSiteActivities() 
+    - Else: 
+        - Print "Invalid choice. Exiting." 
+    - EndIf 
+2. End Main Program 
+
+Function PreOrder(userEmail): 
+    1. Print "Starting Pre-Order for: " with userEmail 
+    2. Input Number of people attending by age group to numOfPeople and ageCategory 
+    3. Input Type of production: "Theatrical or Musical" to showType 
+    4. Input Time of production: "Matinee or Evening" to timeOfDay 
+    5. Input Optional valet services: "Standard or VIP" to serviceType 
+    6. Input Optional tip for valet to tip 
+    7. Input Type of snack: "Non-Alcoholic, Alcoholic, Other" to typeOfSnack 
+
+    8. Call CalculateCoverCharge(ageCategory, numOfPeople) 
+    9. Call CalculateTicketCharge(showType, timeOfDay, numOfPeople) 
+    10. Call CalculateValetCharge(serviceType, timeOfDay, tip) 
+    11. Call CalculateDiscount(numOfPeople, ticketCharge) 
+    12. Set deposit to 50.0 
+    13. Print "Deposit Required: $" with deposit
+ 
+    14. Input "Confirm Pre-order (Yes/No)" to orderConfirmation     
+    15. If orderConfirmation is "Yes": 
+        16. orderDetails = {ticketCharge, coverCharge, valetCharge, snackCharge, discountAmount, totalAmount} 
+        17. Call GenerateQRCode(orderDetails) 
+        18. Print "Pre-order confirmed. Please scan the QR code upon arrival." 
+        19. Return True 
+    20. Else:
+        21. Print "Pre-order not confirmed." 
+        22. Return False 
+    23. EndIf 
+24. End Function 
+
+Function OnSiteActivities(): 
+    1. Call CalculateSnackCharge(typeOfSnack)  
+    2. Input "Valet Tip: " to finalValetTip  
+    3. Call DisplayReceipt()   
+    4. Input "Enter payment to proceed: " to finalPayment 
+    5. confirmed = Call ConfirmPaymentQRCode(finalPayment, totalAmount, deposit) 
+    6. If confirmed:
+        7. Print "You may leave the building." 
+    8. Else:
+        9. Print "Payment insufficient. Cannot leave the building." 
+    10. EndIf 
+11. End Function 
+
+Function ConfirmPaymentQRCode(finalPayment, totalAmount, deposit): 
+    1. Calculate remainingAmount as totalAmount - deposit 
+    2. If finalPayment >= remainingAmount: 
+        3. Print "Payment confirmed." 
+        4. Generate finalQRCode for confirming payment 
+        5. Return True
+    6. Else: 
+        7. Print "Payment insufficient." 
+        8. Return False 
+    9. EndIf
+10. End Function 

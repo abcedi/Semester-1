@@ -1,0 +1,54 @@
+washOption
+payForWash
+generateReceipt
+performCarWash
+
+1) START 
+
+2) Initialize washOptionNames as a list containing 'Basic', 'Clean', 'Super Clean'
+3) Initialize washOptionPrices as a list containing 5.50, 8.75, 12.50 
+4) Initialize selectedWashOptionName
+5) Initialize selectedWashOptionPrice
+6) Initialize receipt
+
+7) washOption(): 
+	a) print "Available Car Wash Options:"   
+	b) for i from 0 to 2 i++: 
+		- print "Option:", washOptionNames[i], "Price: $", washOptionPrices[i] 
+	c) print "Please select a wash option:"   
+	d) userInput -> selectedWashOptionName   
+	e) for i from 0 to 2 i++:   
+		- if washOptionNames[i] == selectedWashOptionName:   
+			- selectedWashOptionPrice = washOptionPrices[i] 
+			- return true 
+
+8) payforWash():  
+	a) print "Your selected option costs: $", selectedWashOptionPrice  
+	b) print "Please make a credit card payment:"
+	c) userInput -> paymentStatus  
+	d) if paymentStatus == "success":  
+		- generateReceipt()  
+		- print "Thank You! Payment successful. Proceeding to car wash."  
+		- return true  
+	e) else:  
+		- print "Sorry, Payment failed. Cannot proceed."  
+		- return false  
+
+9) generateReceipt():  
+	a) receipt = "Receipt: " + selectedWashOptionName + " - $" + str(selectedWashOptionPrice)  
+	b) print receipt  
+
+10) performCarWash():  
+	a) print "Performing", selectedWashOptionName, "car wash."  
+	b) print "Car wash complete. Thank You :)" 
+
+11) Main Process:  
+	a) if washOption():  
+		- if payforWash():  
+			- performCarWash()  
+		- else:  
+			- print "Unable to proceed with car wash due to failed payment."  
+	b) else:  
+		- print "Invalid wash option. Exiting program. Try Again Please."  
+
+12) END

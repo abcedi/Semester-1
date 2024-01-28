@@ -1,0 +1,110 @@
+1. START 
+
+2. Initialize valetCharge to 0.0 
+3. Initialize coverCharge to 0.0 
+4. Initialize ticketCharge to 0.0 
+5. Initialize snackCharge to 0.0 
+6. Initialize discountAmount to 0.0 
+7. Initialize totalAmount to 0.0 
+8. Initialize deposit to 50.0 
+  
+9. Function CalculateValetCharge(serviceType, timeOfDay, tip): 
+10.     If serviceType is "Standard" and timeOfDay is "Matinée": 
+11.         Set valetCharge to 10.0 + tip 
+12.     Else If serviceType is "Standard" and timeOfDay is "Evening": 
+13.         Set valetCharge to 20.0 + tip 
+14.     Else If serviceType is "VIP" and timeOfDay is "Matinée": 
+15.         Set valetCharge to 15.0 + tip 
+16.     Else: 
+17.         Set valetCharge to 30.0 + tip 
+18.     EndIf 
+19.     Return valetCharge 
+20. End Function 
+  
+21. Function CalculateTicketCharge(showType, timeOfDay, numOfPeople): 
+22.     If showType is "Musical" and timeOfDay is "Matinée": 
+23.         Set ticketCharge to 70.0 * numOfPeople 
+24.     Else If showType is "Musical" and timeOfDay is "Evening": 
+25.         Set ticketCharge to 150.0 * numOfPeople 
+26.     Else If showType is "Theatre" and timeOfDay is "Matinée": 
+27.         Set ticketCharge to 55.0 * numOfPeople 
+28.     Else: 
+29.         Set ticketCharge to 115.0 * numOfPeople 
+30.     EndIf 
+31.     Return ticketCharge 
+32. End Function 
+  
+33. Function CalculateCoverCharge(ageCategory, numOfPeople): 
+34.     If ageCategory is "Child": 
+35.         Set coverCharge to 0.75 * numOfPeople 
+36.     Else If ageCategory is "Adult": 
+37.         Set coverCharge to 4.0 * numOfPeople 
+38.     Else: 
+39.         Set coverCharge to 1.5 * numOfPeople 
+40.     EndIf 
+41.     Return coverCharge 
+42. End Function 
+
+43. Function CalculateDiscount(numberOfPeople, ticketTotal): 
+44.     If numberOfPeople is 2: 
+45.         Set discountAmount to 5% of ticketTotal 
+46.     Else If numberOfPeople is 3: 
+47.         Set discountAmount to 15% of ticketTotal 
+48.     Else If numberOfPeople is 4: 
+49.         Set discountAmount to 20% of ticketTotal 
+50.     Else If numberOfPeople more than or equal 5: 
+51.         Set discountAmount to 30% of ticketTotal 
+52.     EndIf 
+53.     Return discountAmount 
+54. End Function 
+  
+55. Function CalculateSnackCharge(typeOfSnack): 
+56.     If typeOfSnack is "Non-Alcoholic Beverage": 
+57.         Set snackCharge to 2.25 
+58.     Else If typeOfSnack is "Alcoholic Beverage": 
+59.         Set snackCharge to 7.50 
+60.     Else: 
+61.         Set snackCharge to 1.75 
+62.     EndIf 
+63.     Return snackCharge 
+64. End Function 
+  
+65. Function DisplayReceipt(): 
+66.     Print "Cover Charge:" with coverCharge 
+67.     Print "Ticket Charge:" with ticketCharge 
+68.     Print "Snack Charge:" with snackCharge 
+69.     Print "Valet Charge:" with valetCharge 
+70.     Print "Discount Amount:" with discountAmount 
+71.     Calculate totalAmount as coverCharge + ticketCharge + snackCharge + valetCharge - discountAmount 
+72.     Print "total Amount:" with totalAmount 
+73. End Function 
+  
+74. Function GenerateQRCode(orderDetails): 
+75.     Create QR code with orderDetails 
+76.     Return QR code 
+77. End Function 
+  
+78. Function PreOrder(showType, timeOfDay, numOfPeople, ageCategory, serviceType, tip, typeOfSnack): 
+79.     Call CalculateTicketCharge(showType, timeOfDay, numOfPeople) 
+80.     Call CalculateCoverCharge(ageCategory, numOfPeople) 
+81.     Call CalculateValetCharge(serviceType, timeOfDay, tip) 
+82.     Call CalculateDiscount(numberOfPeople, ticketCharge) 
+83.     Call CalculateSnackCharge(typeOfSnack) 
+84.     Print "Deposit Required: " with deposit
+85.     Input "Confirm Pre-order (Yes/No)" 
+86.     If confirmed then 
+87.         orderDetails = {ticketCharge, coverCharge, valetCharge, snackCharge, discountAmount, totalAmount} 
+88.         GenerateQRCode(orderDetails) 
+89.         Print "Pre-order confirmed. Please scan the QR code upon arrival." 
+90.     EndIf 
+91. End Function 
+  
+92. Begin Main Logic: 
+93.     Input showType, timeOfDay, numOfPeople, ageCategory, serviceType, tip, typeOfSnack 
+94.     Call PreOrder(showType, timeOfDay, numOfPeople, ageCategory, serviceType, tip, typeOfSnack) 
+95.     Call DisplayReceipt() 
+96. End Main Logic 
+ 
+97. END
+
+ 

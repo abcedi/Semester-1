@@ -1,0 +1,48 @@
+
+1. Start 
+
+ 
+#Assuming initialization of variables has already been done
+#Calculate scores of players
+2. Calculate player1_score as the total successful baskets made by player1 
+
+3. Calculate player2_score as the total successful baskets made by player2 
+
+ 
+
+#Determine a winner and a loser, and also increment any ties 
+4. If player1_score > player2_score: 
+
+	a) Set winner to “Player 1”
+	b) Set loser to "Player 2" 
+
+5. If player2_score > player1_score: 
+
+	a) Set winner to “Player 2”
+	b) Set loser to "Player 1"  
+
+6. If player1_score == player2_score: 
+
+	a) Increment tied_games by 1 
+
+ 
+
+#Calculate dollars owed 
+7. Calculate dollars_owed as (player1_score - player2_score) 
+
+8. Reduce dollars_owed by (tied_games * 0.5) 
+
+9. If dollars_owed < 0: 
+
+	a) Set dollars_owed to 1.00 
+
+ 
+
+#Outputs/displays results 
+10. Output winner as the overall winner 
+
+11. Output dollars_owed as the amount owed by the losing player to the winner 
+
+ 
+
+12. Exit 

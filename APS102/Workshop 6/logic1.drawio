@@ -1,0 +1,324 @@
+<mxfile host="app.diagrams.net" modified="2023-10-27T04:10:49.391Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="-xa5DqVXR6oO-GigoqPf" version="22.0.8" type="device">
+  <diagram name="Page-1" id="tz50mFPrgPmjvffZQxx1">
+    <mxGraphModel dx="3387" dy="904" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-1" target="7TfiTVs2wIGFd3Ane8E1-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-1" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="45" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-2" value="Idle/Ready State" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="-710" y="3" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-3" target="7TfiTVs2wIGFd3Ane8E1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-3" value="LCD Colour Screen: Enabled (Show available products &amp;amp; prices)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="155" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-5" target="7TfiTVs2wIGFd3Ane8E1-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-5" value="Column/Row buttons: Enabled (Awaiting customer selection of products)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-7" target="7TfiTVs2wIGFd3Ane8E1-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-7" value="Enter button: Enabled (For confirming product selection)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-9" target="7TfiTVs2wIGFd3Ane8E1-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-9" value="Correct button: Disabled (No entries to correct yet)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-11" target="7TfiTVs2wIGFd3Ane8E1-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-11" value="Cancel button: Enabled (Allows user to cancel at any time)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-13" target="7TfiTVs2wIGFd3Ane8E1-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-13" value="Pay button: Disabled (No products selected yet)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="605" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-15" target="7TfiTVs2wIGFd3Ane8E1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-15" value="Payment Module: Disabled (No payment required yet)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-17" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="785" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-20" target="7TfiTVs2wIGFd3Ane8E1-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-20" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="45" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-22" target="7TfiTVs2wIGFd3Ane8E1-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-22" value="LCD Colour Screen: Enabled (Show selected product &amp;amp; total price)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="155" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-24" target="7TfiTVs2wIGFd3Ane8E1-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-24" value="Column/Row buttons: Enabled (For selection of more products)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-26" target="7TfiTVs2wIGFd3Ane8E1-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-26" value="Enter button: Enabled (To add more products to session)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-28" target="7TfiTVs2wIGFd3Ane8E1-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-28" value="Correct button: Enabled (To correct any entry)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-30" target="7TfiTVs2wIGFd3Ane8E1-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-30" value="Cancel button: Enabled (Allows user to cancel)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-32" target="7TfiTVs2wIGFd3Ane8E1-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-32" value="Pay button: Enabled (To proceed to payment)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="605" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-34" target="7TfiTVs2wIGFd3Ane8E1-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-34" value="Payment Module: Disabled (Await payment confirmation)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-35" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-505" y="785" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-36" value="Active State" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="-500" y="3" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-39" target="7TfiTVs2wIGFd3Ane8E1-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-39" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="45" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-41" target="7TfiTVs2wIGFd3Ane8E1-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-41" value="LCD Colour Screen: Enabled (Show payment status &amp;amp; total amount due)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="155" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-43" target="7TfiTVs2wIGFd3Ane8E1-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-43" value="Column/Row buttons: Disabled (No further product selection)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-45" target="7TfiTVs2wIGFd3Ane8E1-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-45" value="Enter button: Disabled (No more products to add)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-47" target="7TfiTVs2wIGFd3Ane8E1-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-47" value="Correct button: Disabled (Final stage)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-49" target="7TfiTVs2wIGFd3Ane8E1-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-49" value="Cancel button: Enabled (Allows user to cancel before payment)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-51" target="7TfiTVs2wIGFd3Ane8E1-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-51" value="Pay button: Enabled (For the user to initiate the payment process)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="605" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-53" target="7TfiTVs2wIGFd3Ane8E1-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-53" value="Payment Module: Enabled (Reading and processing payment)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-54" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="785" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-55" value="Payment State" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="3" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-57" target="7TfiTVs2wIGFd3Ane8E1-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-57" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="45" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-59" target="7TfiTVs2wIGFd3Ane8E1-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-59" value="LCD Colour Screen: Enabled (Show cancellation message)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="155" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-61" target="7TfiTVs2wIGFd3Ane8E1-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-61" value="Column/Row buttons: Disabled (Session reset)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-63" target="7TfiTVs2wIGFd3Ane8E1-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-63" value="Enter button: Disabled (Session reset)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="335" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-65" target="7TfiTVs2wIGFd3Ane8E1-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-65" value="Correct button: Disabled (Session reset)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="425" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-67" target="7TfiTVs2wIGFd3Ane8E1-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-67" value="Cancel button: Disabled (Already in cancellation state)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="515" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-69" target="7TfiTVs2wIGFd3Ane8E1-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-69" value="Pay button: Disabled (Session reset)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="605" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-71" target="7TfiTVs2wIGFd3Ane8E1-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-71" value="Payment Module: Enabled (To return any inserted funds)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-72" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="785" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-73" value="Cancel State" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="-130" y="3" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-74" target="7TfiTVs2wIGFd3Ane8E1-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-74" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-900" y="50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-75" value="Main Process" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="-910" y="3" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-76" target="7TfiTVs2wIGFd3Ane8E1-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-76" value="Idle/Ready State:&lt;br&gt;Display a screensaver or slideshow of top-selling or new products.&amp;nbsp;Play a soft ambient music or jingle." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-920" y="160" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-78" target="7TfiTVs2wIGFd3Ane8E1-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-78" value="User Interaction Detected" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="-900" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-80" target="7TfiTVs2wIGFd3Ane8E1-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-80" value="Active State:&lt;br&gt;Display products and prompt user to make a selection." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-910" y="515" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-82" target="7TfiTVs2wIGFd3Ane8E1-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-82" target="7TfiTVs2wIGFd3Ane8E1-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-960" y="320" />
+              <mxPoint x="-960" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-82" value="User Interaction" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-890" y="270" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-84" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-840" y="378" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-90" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-940" y="290" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-92" target="7TfiTVs2wIGFd3Ane8E1-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-92" target="7TfiTVs2wIGFd3Ane8E1-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-92" value="Pay or Cancel?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-895" y="620" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-93" target="7TfiTVs2wIGFd3Ane8E1-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-740" y="800" />
+              <mxPoint x="-740" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-93" value="Cancel&amp;nbsp;State" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-900" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-96" value="Pay" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-935" y="650" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-97" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-900" y="910" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-98" target="7TfiTVs2wIGFd3Ane8E1-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-98" value="Payment&lt;br&gt;&amp;nbsp;State" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="645" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-100" value="Cancel" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-845" y="740" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="7TfiTVs2wIGFd3Ane8E1-101" target="7TfiTVs2wIGFd3Ane8E1-97">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1010" y="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-101" value="Successful Payment&lt;br&gt;Display Receipt" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-106" value="Product Structure&lt;br&gt;slotID&lt;br&gt;sku&lt;br&gt;quantity&lt;br&gt;maxQuantity&lt;br&gt;minQuantity&lt;br&gt;price&lt;br&gt;description" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1170" y="10" width="120" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="7TfiTVs2wIGFd3Ane8E1-107" value="Transition structure&lt;br&gt;slotID&lt;br&gt;quantity&lt;br&gt;price&lt;br&gt;description" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1050" y="15" width="120" height="117" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

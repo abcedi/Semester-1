@@ -1,0 +1,32 @@
+1. START
+2. Function ExploreRoomA():
+3.     Initialize variables (time, distance, roomExplorationTime)
+
+4.     While flashlightPower > 0:
+5.         Call [Move] action
+6.         Call [CheckRoom] action
+
+7.         ExploreRoomA() 
+
+8.         Check remaining flashlightPower
+
+9.     // End of the Algorithm
+
+10. // ExploreRoomA Subprocess
+11. Function ExploreRoomA():
+12.    Initialize game variables (gamesPlayed, totalTime)
+
+13.    While gamesPlayed < 5:
+14.        Determine starting player using [RandomBinary] process
+15.        Prompt Player-1 to select the unique identifier symbol ("X" or "O")
+        
+16.        While not end of game:
+17.            MakeMove(Player-1)
+18.            MakeMove(Player-2)
+19.            CheckWinner
+20.            Increment totalTime by 4 minutes for each move
+            
+21.        Update totalTime based on game outcomes (ties, losses)
+22.        Increment gamesPlayed
+
+23.    END

@@ -1,0 +1,113 @@
+ExploreRoom-A Structure
+gamesPlayed
+totalTimeInRoom
+gameResult
+currentPlayer
+playerSymbol
+moveCount
+
+ExploreDungeon Structure
+totalBatteryLife
+currentTime
+totalStepsTaken
+returnJourneyStarted
+roomsExplored
+hallLength
+moveDistance
+moveTime
+averageRoomTime
+longestRoomTime
+currentRoomTime
+lastTimeReport
+
+Subprocess ExploreRoom-A:
+1. START
+
+2. Initialize variables gamesPlayed, totalTimeInRoom, gameResult, currentPlayer, playerSymbol and moveCount
+
+3. Initialize gamesPlayed, totalTimeInRoom and moveCount to 0
+
+4. While gamesPlayed < 5 AND totalTimeInRoom + currentTime <= totalBatteryLife:
+    	A. currentPlayer = Call [RandomBinary]
+    	B. If currentPlayer == 1:
+        		- Prompt Player-1 for choosing their symbol (X or O)
+        		- Player-2 assumes the alternate symbol
+    	C. Else:
+        		- Player-1 is assigned the alternate symbol after Player-2 chooses
+    	D. Reset board for new game using [ClearBoard]
+    	E. gameResult = 0
+    	F. moveCount = 0
+    	G. While gameResult == 0:
+       		 i. If currentPlayer == 1:
+            			- Call [MakeMove] (Player-1)
+       		 ii. Else:
+            			- Call [MakeMove] (Player-2)
+        		iii. gameResult = Call [CheckWinner]
+        		iv. If game is ongoing, switch currentPlayer for next turn
+    	H. Update totalTimeInRoom based on game outcomes and moveCount:
+        		- Add 4 minutes for each move made during the game
+        		- If gameResult is 3 (tie), add additional 8 minutes
+        		- If Player-1 loses (gameResult is 2), add additional 15 minutes
+    	I. Increment gamesPlayed
+
+5. Return totalTimeInRoom
+
+6. END
+
+ 
+Main Process ExploreDungeon
+1. START
+
+2. Initialize totalBatteryLife to 270 minutes // 4.5 hours
+
+3. Initialize returnJourneyStarted to false
+
+4. Initialize currentTime, totalStepsTaken, roomsExplored, lastTimeReport to 0
+
+5. Set hallLength to 60, moveDistance to 4, moveTime to 1.5
+
+6. While totalBatteryLife > currentTime AND returnJourneyStarted = false
+    	A. Call Move
+        		i. Increment currentTime by moveTime
+        		ii. Increment totalStepsTaken by moveDistance
+    	B. If totalStepsTaken % hallLength == 0
+        		i. Call ChangeDirection
+    	C. If Call CheckRoom == "Room-A"
+        		i. currentRoomTime = Call ExploreRoom-A
+        		ii. Update averageRoomTime and longestRoomTime
+			- averageRoomTime = ((averageRoomTime * roomsExplored) + currentRoomTime) / (roomsExplored + 1)
+            			- longestRoomTime = max(longestRoomTime, currentRoomTime)
+        		iii. Increment currentTime by currentRoomTime
+		iv. Increment roomsExplored by 1
+    	D. Else if Call CheckRoom == "Room-B"
+        		i. currentRoomTime = Call ExploreRoom-B
+        		ii. Update averageRoomTime and longestRoomTime
+        		iii. Increment currentTime by currentRoomTime
+		iv. Increment roomsExplored by 1
+    	E. If currentTime - lastTimeReport >= 30 minutes OR at end of hallway
+		i. Time Analysis Summary
+        		- remainingBatteryLife = totalBatteryLife - currentTime
+            		- estimatedTimeToReturn = (totalStepsTaken / moveDistance) * moveTime
+            		- riskTime = averageRoomTime + longestRoomTime
+            		- Print "Time Analysis Summary:"
+            		- Print "Current Time:", currentTime
+            		- Print "Remaining Battery Life:", remainingBatteryLife
+            		- Print "Estimated Time to Return:", estimatedTimeToReturn
+            		- Print "Risk Time for Next Room Exploration:", riskTime
+            		- Print "Recommendation: Continue Exploration" or "Recommendation: Turn Around Now" based on the analysis
+		ii. Update lastTimeReport to currentTime
+    	F. If Call TurnAround == true
+        	i. Set returnJourneyStarted to true
+
+7. If returnJourneyStarted
+    	A. Reverse navigate the recorded journey using Move until the starting point is reached
+    	B. Update currentTime and totalStepsTaken
+
+8. If totalBatteryLife > currentTime
+    	A. Print "Successfully returned. Battery remaining:", totalBatteryLife - currentTime
+    	B. Print "Total rooms explored:", roomsExplored
+
+9. Else
+    	A. Print "Failed to return before battery ran out."
+
+10. END

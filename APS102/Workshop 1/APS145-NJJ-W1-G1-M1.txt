@@ -1,0 +1,63 @@
+
+1. Start
+
+2. Initialize tied_games to 0
+3. Initialize dollars_owed to 0
+4. Initialize player1_score to 0
+5. Initialize player2_score to 0
+6. Initialize player1_attempts to 0
+6. Initialize player2_attempts to 0
+
+6. Prompt Player1 to enter number on dice
+7. Store value to num1
+8. Prompt Player2 to enter number on dice
+9. Store value to num2
+10. if num1 == num2:
+	a. go back to step 6
+11. if num1 > num2:
+	a. Display "Player1 goes first"
+12. else
+	a. Display "Player2 goes first"
+
+13.For each of the 4 attempts for Player1
+(i) make a throw and see if its successful
+if yes, increment Player1_score by 1
+increment player1_attempts by 1
+14.For each of the 4 attempts for Player2
+(ii) make a throw and see if its successful
+if yes, increment Player2_score by 1
+increment player2_attempts by 1
+
+
+15. Calculate player1_score as the total successful baskets made by player1 
+
+16. Calculate player2_score as the total successful baskets made by player2 
+
+17. If player1_score > player2_score: 
+
+	a) Set winner to “Player 1”
+
+18. If player2_score > player1_score: 
+
+	a) Set winner to “Player 2” 
+
+19. If player1_score == player2_score: 
+
+	a) Increment tied_games by 1 
+	b) Go back to step 13
+
+20. Calculate dollars_owed as (player1_score - player2_score) 
+
+21. Reduce dollars_owed by (tied_games * 0.5) 
+
+22. If dollars_owed < 0: 
+
+	a) Set dollars_owed to 1.00 
+
+23. Output winner as the overall winner 
+
+24. Output dollars_owed as the amount owed by the losing player to the winner 
+
+ 
+
+25. Exit 
