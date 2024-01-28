@@ -1,0 +1,34 @@
+OPS102 | Week 11 & Day 1 |
+
+#!/bin/bash
+
+for animal in "$@"
+do
+	echo ----------
+	echo $animal
+	echo ----------
+	echo
+	red
+done
+
+#!/bin/bash
+
+low=$1
+high=$2
+ranges=$(( $high - $low ))
+secret=$(( $low + RANDOM%ranges ))
+
+while true
+do
+echo "Enter a number between $low and $high: "
+read guess
+if [ $guess = $secret ]
+	then
+	echo "----------!CORRECT!------------"
+	echo "Correct! THe numebr was: $secret "
+	echo "-------------------------------"
+	exit 0
+else
+echo "Wrong! Try agian."
+fi
+done

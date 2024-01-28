@@ -1,0 +1,9 @@
+ChatGPT is an artificial intelligence chatbot developed by OpenAI and released in November 2022.  
+
+The name "ChatGPT" combines "Chat", referring to its chatbot functionality, and "GPT", which stands for Generative Pre-trained Transformer, a type of large language model.  
+
+Wikipedia 
+
+ChatGPT has been trained on huge amount of data scraped from internet. 
+
+This has enabled us to develop artificial programs that can answer questions like humans. 

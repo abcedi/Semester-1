@@ -1,0 +1,18 @@
+OPS 102 | Saso Kocev (works for security)
+
+windows
+dir - file and folders
+
+linux
+ls - list all files
+
+questions:
+
+is there no connection of the creation of windows and linux? nope different companies
+
+What is putty and what is matrix? is matrix the server and putty is the virtual machine? yes
+
+how are vpn unsafe? because you share you internet with millions of people  (mainly big ones)
+
+
+

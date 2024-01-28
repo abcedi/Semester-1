@@ -1,0 +1,45 @@
+Week 9 | OPS102 |
+In your home directory and any subdirectories, locate files named review.txt, Review.txt, or REVIEW.TXT. Append the all results to the bottom of a file called log.txt
+
+My answer:
+find ~ -ir "review.txt" >> log.txt
+
+Actual answer
+find ~ -iname "review.txt" >> log.txt
+
+#!/bin/bash
+
+name=Saso //initializing variable
+
+echo "Hello &name" // & is like % but instead you type the variable name after
+
+1. create file		nano ./hello2.sh
+2. give permission	chmod u+x
+3. run command		./hello2.sh
+4. show code		cat -n hello2.sh
+
+strong quotes ' ' - outputs the value of the variables.
+weak quotes " " - outputs the actual/exact text in the code.(i.e. shows actual variable name)
+
+school="Seneca College"
+reads the space
+good practice to use weak quotes when initializing variables
+variables are case sensitive
+
+favourite="My favourite college is $school" //nested variables
+
+#!/bin/bash
+
+school="Seneca" //make sure the varible is in the script in order for it to word
+
+echo "My school is $school"
+
+Scripts run from top to buttom.
+
+env - environment variables
+
+export var=value - adds to the the environment variable
+doesn't have to be in script
+
+
+

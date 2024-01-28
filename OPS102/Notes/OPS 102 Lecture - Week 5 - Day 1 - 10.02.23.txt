@@ -1,0 +1,23 @@
+OPS102 | Week 5 | 10-02-2023
+
+quiz - on permissions(big chunk), file redirection: echo, find
+
+Commands:
+sort -n = numerically
+sort -f = ignores case sensitivity
+ps - shows process id and showing application running on screen like task mangers
+ps -x -shows all application running from the user
+kill (process.id) - closes the application
+	if you close a file, it will create another 
+kill -9 (process.id) - force quit and freezes application
+file for backup with a new name.
+tail -f filename - prints the latest line (updates on screen)
+tail -f file & runs in the background
+jobs - shows commands/processes running in the background
+fg 1 - puts the 1st job in the latest line.
+ctrl + z - puts the application in background
+ctrl + c - cancels
+pkill nano - kills nano all application.
+ps -aufux - shows everything running in the linux system
+ps -u username - shows everything 
+& in the end of the commands automatically puts the application in the background

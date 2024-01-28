@@ -1,0 +1,242 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+Full Name  : Ashton Miguelle S. Mendoza
+Student ID#: 152084224
+Email      : ammendoza2@myseneca.ca
+Section    : NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+#define _CRT_SECURE_NO_WARNINGS
+
+// System Libraries
+#include <stdio.h>
+#include <string.h>
+
+// User Libraries
+#include "core.h"
+
+// include the user library "clinic" where the function prototypes are declared
+#include "clinic.h"
+
+void clearInputBuffer(void)
+{
+    // Discard all remaining char's from the standard input buffer:
+    while (getchar() != '\n')
+    {
+        ; // do nothing!
+    }
+}
+// Wait for user to input the "enter" key to continue
+void suspend(void)
+{
+    printf("<ENTER> to continue...");
+    clearInputBuffer();
+    putchar('\n');
+}
+
+//////////////////////////////////////
+// USER INPUT FUNCTIONS
+//////////////////////////////////////
+
+//
+// Copy your work done from Milestone #2 (core.c) into this file
+// - Organize your functions in the same order as they are listed in the core.h file
+//
+
+int inputInt(void)
+{
+    int input;
+    int retry = 0;
+    char secondInput;
+
+    do
+    {
+        scanf(" %d%c", &input, &secondInput);
+
+        if (secondInput == '\n')
+        {
+            retry = 1;
+        }
+        else
+        {
+            clearInputBuffer();
+            printf("Error! Input a whole number: ");
+        }
+    } while (retry == 0);
+
+
+    return input;
+}
+
+int inputIntPositive(void)
+{
+    int positiveNum;
+    int retry = 0;
+
+    do
+    {
+        positiveNum = inputInt();
+
+        if (positiveNum > 0)
+        {
+            retry = 1;
+        }
+        else
+        {
+            printf("ERROR! Value must be > 0: ");
+        }
+    } while (retry == 0);
+
+    return positiveNum;
+}
+
+int inputIntRange(int min, int max)
+{
+    int rangeInput;
+    int low = min;
+    int high = max;
+
+    do 
+    {
+        rangeInput = inputInt();
+
+        if (rangeInput < low || rangeInput > high)
+        {
+            printf("ERROR! Value must be between %d and %d inclusive: ", low, high);
+        }
+    } while (rangeInput < low || rangeInput > high);
+
+    return rangeInput;
+}
+
+char inputCharOption(const char* validChars)
+{
+    char input;
+    char secondInput;
+    int i;
+    int retry = 0;
+
+    do 
+    {
+        scanf("%c%c", &input, &secondInput);
+
+        if (secondInput != '\n')
+        {
+            retry = 0;
+            clearInputBuffer();
+        }
+        else 
+        {
+            for (i = 0; validChars[i] != '\0'; i++)
+            {
+                if (input == validChars[i])
+                {
+                    retry = 1;
+                }
+            }
+        }
+
+        if (retry == 0) 
+        {
+            printf("ERROR: Character must be one of [%s]: ", validChars);
+        }
+
+    } while (retry == 0);
+
+    return input;
+}
+
+void inputCString(char* str, int minLength, int maxLength)
+{
+    int lengthCount;
+    int low = minLength;
+    int high = maxLength;
+    int retry = 0;
+    char temp[100];
+
+    do {
+        scanf("%99[^\n]", temp);
+        lengthCount = strlen(temp);
+        
+        clearInputBuffer();
+
+        if (high == low && strlen(temp) != high)
+        {
+            printf("Invalid %d-digit number! Number: ", high);
+        }
+        else if (lengthCount > high)
+        {
+            printf("ERROR: String length must be no more than %d chars: ", high);
+        }
+        else if (lengthCount < low)
+        {
+            printf("ERROR: String length must be between %d and %d chars: ", low, high);
+        }
+        else 
+        {
+            strcpy(str, temp);
+            str[lengthCount] = '\0';
+            retry = 1;
+        }
+    } while (retry == 0);
+
+}
+
+#include <stdio.h>
+
+void displayFormattedPhone(const char* phoneNum)
+{
+    if (phoneNum == NULL)
+    {
+        printf("(___)___-____");
+    }
+    else
+    {
+        int i;
+        int getIntTrue = 1;
+        int lengthCount = 0;
+        int continueLoop = 0;
+
+        // length of the string
+        lengthCount = strlen(phoneNum);
+
+        // Check if the length is valid and all characters are digits
+        if (lengthCount != 10)
+        {
+            getIntTrue = 0;
+        }
+        else
+        {
+            for (i = 0; i < lengthCount && continueLoop == 0; i++)
+            { // check if digit is found through ASCII and flag if not
+                if (phoneNum[i] < '0' || phoneNum[i] > '9')
+                {
+                    getIntTrue = 0;
+                    continueLoop = 1;  // flag
+                }
+            }
+        }
+
+        // Display formatted phone number
+        if (!getIntTrue)
+        {
+            printf("(___)___-____");
+        }
+        else
+        {
+            printf("(%c%c%c)%c%c%c-%c%c%c%c",
+                phoneNum[0], phoneNum[1], phoneNum[2],
+                phoneNum[3], phoneNum[4], phoneNum[5],
+                phoneNum[6], phoneNum[7], phoneNum[8], phoneNum[9]);
+        }
+    }
+}
+
+
+
+

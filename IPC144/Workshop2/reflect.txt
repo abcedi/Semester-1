@@ -1,0 +1,31 @@
+Reflection Workshop 2
+
+***************************************************************************** 
+Workshop - #2 Reflection 
+Full Name : Abcedi Ilacas 
+Student ID# : 138180211 
+Email : ailacas1@myseneca.ca 
+Section : NBB 
+Authenticity Declaration : 
+I declare this submission is the result of my own work and has not been 
+shared with any other student or 3rd party content provider.This submitted 
+piece of work is entirely of my own creation. 
+***************************************************************************** 
+
+1) price1 might be having issues because of floating-point inaccuracies. The code will struggle with decimal numbers. Its not always going to be 100% accurate. Floating-point numbers cant represent real numbers properly. When you do the multiplication, the result will probably not be exactly 1796 which is an innacurate conversion.
+Using "double" is more precise than floating-points which can represent decimal numbers even more accurately.
+
+2) For this code the 100.0 is a double and the money is an integer or int. Implicit type promotion happens and money is promoted to double before the division.
+The next line, the "money / (double)100);" is explicit casting to make the integer 100 a double which makes the money a double as well by implicit promotion.
+The next line is also explicit casting but opposite, the money is explicit promoted and the integer 100 is implicitly promoted to double.
+
+3) a. Value of the variable result will be just 72 since in the beginning, money was set as an int and also 100 is also an int. The fractional part is truncated.
+
+b. - sample 1 will display a wrong value since %lf will expect a double but the int division money / 100 returns an integer.
+- sample 2 is correct and will display 72 since it uses %d
+- sample 3 is the same as sample 1 since it uses %lf
+- sample 4 is same as sample 2 and will be correct since it uses %d
+
+c. Improper use of format specifiers is the reason for the issues with sample 1 and 3. The %lf expects a double but the money / 100 and also result are integers or int. The error is because of a mismatch between the variables which causes an undefined result.
+Promotion, truncation, coersion and implicit and explicit type casting are very crucial and important in how data types work with each other. Being able to understand data types and their limitations is very important in coding.
+

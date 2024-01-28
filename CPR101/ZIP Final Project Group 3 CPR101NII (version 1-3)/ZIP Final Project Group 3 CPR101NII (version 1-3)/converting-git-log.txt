@@ -1,0 +1,313 @@
+commit ce717ffbc4bb83ada6789ba32cb74fe3c0b816db
+Author: Lena <lpark9@myseneca.ca>
+Date:   Fri Dec 8 23:12:30 2023 -0500
+
+    V3
+
+diff --git a/converting.c b/converting.c
+index e6aef14..0832d03 100644
+--- a/converting.c
++++ b/converting.c
+@@ -5,11 +5,11 @@
+ 
+ /*
+ Author: Lena Park, 
+-email: 
+-ID: 
+-Date written:
+-Course:
+-Project:
++email: lpark9@myseneca.ca
++ID: 127390235 
++Date written: 2023.12.08
++Course:CPR101
++Project:Final
+ [executable filename]: converting.c
+ [title of program]: converting
+ Purpose: It is a function that converts a string of integers into ASCII integer variables.
+
+commit 258e519818d581d08206063c0ae752623075440b
+Author: Lena <lpark9@myseneca.ca>
+Date:   Fri Dec 8 23:06:24 2023 -0500
+
+    V1
+
+diff --git a/converting.c b/converting.c
+index 6283b2e..e6aef14 100644
+--- a/converting.c
++++ b/converting.c
+@@ -3,50 +3,87 @@
+ #define BUFFER_SIZE 80
+ #include "converting.h"
+ 
++/*
++Author: Lena Park, 
++email: 
++ID: 
++Date written:
++Course:
++Project:
++[executable filename]: converting.c
++[title of program]: converting
++Purpose: It is a function that converts a string of integers into ASCII integer variables.
++*/
+ 
++/* Version 1 */
+ void converting(void)
+ {
+-	// V1
+ 	printf("*** Start of Converting Strings to int Demo ***\n"); // prints text
+ 	char intString[BUFFER_SIZE]; // collects input in the variable until 80 characters
+ 	int intNumber; // to store the converted integer
+ 
+-	do
++	do 
+ 	{
+ 		printf("Type an int numeric string (q - to quit) :\n"); // prompts user to enter input or quit
+ 		fgets(intString, BUFFER_SIZE, stdin); // read the user's input and store it in intString array. It reads up to BUFFER_SIZE - 1 (null terminator)
+-
++		
+ 		intString[strlen(intString) - 1] = '\0'; // removes the null terminitor
+-
++		
+ 		if (strcmp(intString, "q") != 0) // compares input and checks if user quits or else it converts the string of integers into ASCII - integer
+ 		{
+ 			intNumber = atoi(intString); // atio function is the converter
+ 			printf("Converted number is %d\n", intNumber); // prints the result
+ 		}
+ 	} while (strcmp(intString, "q") != 0); // loops until user enters 'q'
+-
++	
+ 	printf("*** End of Converting Strings to int Demo ***\n\n"); // ending message
+ 
++	/* Version 2 */
++	printf("*** Start of Converting Strings to double Demo ***\n");
++
++	char doubleString[BUFFER_SIZE]; // Declares an array 'doubleString' double to store the input string. Collects input in the variable until 80 characters
++	double doubleNumber; // To store the converted double numeric value.
++
++	do 
++	{
++		printf("Type the double numeric string (q - to quit) :\n");
++		
++		fgets(doubleString, BUFFER_SIZE, stdin); // Uses the fget to read the input from user (stdin) and stores it to doubleString
++		doubleString[strlen(doubleString) - 1] = '\0'; // Removes the newline character at the end of the string by setting it to '\0'.
++		fflush(stdin);
++
++		if ((strcmp(doubleString, "q") != 0)) // Checks if user didn't press "q"
++		{
++			doubleNumber = atof(doubleString); // It converts the string to a double using atof (ASCII to float) function and stores the result in doubleNumber.
++			printf("Converted number is %f\n", doubleNumber); // prints the result in doubleNumber
++		}
++
++	} while (strcmp(doubleString, "q") != 0);; // Continues loop until "q" is pressed
++	
++	printf("*** End of Converting Strings to double Demo ***\n\n"); 
++	
+ 
++	/* Version 3 */
+ 
+-	//V2
+-	printf("*** Start of Converting Strings to double Demo ***\n"); // prints text
+-	char doubleString[BUFFER_SIZE]; // collects input in the variable until 80 characters
+-	double doubleNumber; // to store the converted double
++	printf("*** Start of Converting Strings to long Demo ***\n");
++	char longString[BUFFER_SIZE]; // Declare an array doubleString of type double store the input string.
++	long longNumber; // A variable doubleNumber of type double to store the converted numeric value.
+ 
+ 	do
+ 	{
+-		printf("Type an double numeric string (q - to quit) :\n"); // prompts user to enter input or quit
+-		fgets(doubleString, BUFFER_SIZE, stdin); // read the user's input and store it in doubleString array. It reads up to BUFFER_SIZE - 1 (null terminator)
++		printf("Type the long numeric string (q - to quit) :\n");
+ 
+-		doubleString[strlen(doubleString) - 1] = '\0'; // removes the null terminitor
++		fgets(longString, BUFFER_SIZE, stdin); // Uses the fget to read the input from user (stdin) and stores it to longNumber
++		longString[strlen(longString) - 1] = '\0'; // Removes the newline character at the end of the string by setting it to '\0'
+ 
+-		if (strcmp(doubleString, "q") != 0) // compared input and checks if user quits or else it converts the string of double into ASCII double
++		if ((strcmp(longString, "q") != 0)) // Checks if user didn't press "q"
+ 		{
+-			doubleNumber = atof(doubleString); // atof function is the converter
+-			printf("Converted number is %f\n", doubleNumber); //prints double number
++			longNumber = atoi(longString); // Converts the string to a long using atoi (ASCII to integer) function and stores the result in longNumber.
++			printf("Converted number is %ld\n", longNumber); // Prints the converted long value.
+ 		}
+-	} while (strcmp(doubleString, "q") != 0); // loops until user enters 'q'
++	} while (strcmp(longString, "q") != 0); // Continues loop until "q" is pressed
++
++	printf("*** End of Converting Strings to long Demo ***\n\n");
++	
++}
+ 
+-	printf("*** End of Converting Strings to int Demo ***\n\n"); //ending message
+-}
+\ No newline at end of file
+
+commit 4ba9e59209a16e638708a63a410286422f5137cd
+Author: Lena <lpark9@myseneca.ca>
+Date:   Fri Dec 8 22:53:56 2023 -0500
+
+    V1
+
+diff --git a/converting.c b/converting.c
+index 1f51d0f..6283b2e 100644
+--- a/converting.c
++++ b/converting.c
+@@ -3,9 +3,33 @@
+ #define BUFFER_SIZE 80
+ #include "converting.h"
+ 
+-// V2
++
+ void converting(void)
+ {
++	// V1
++	printf("*** Start of Converting Strings to int Demo ***\n"); // prints text
++	char intString[BUFFER_SIZE]; // collects input in the variable until 80 characters
++	int intNumber; // to store the converted integer
++
++	do
++	{
++		printf("Type an int numeric string (q - to quit) :\n"); // prompts user to enter input or quit
++		fgets(intString, BUFFER_SIZE, stdin); // read the user's input and store it in intString array. It reads up to BUFFER_SIZE - 1 (null terminator)
++
++		intString[strlen(intString) - 1] = '\0'; // removes the null terminitor
++
++		if (strcmp(intString, "q") != 0) // compares input and checks if user quits or else it converts the string of integers into ASCII - integer
++		{
++			intNumber = atoi(intString); // atio function is the converter
++			printf("Converted number is %d\n", intNumber); // prints the result
++		}
++	} while (strcmp(intString, "q") != 0); // loops until user enters 'q'
++
++	printf("*** End of Converting Strings to int Demo ***\n\n"); // ending message
++
++
++
++	//V2
+ 	printf("*** Start of Converting Strings to double Demo ***\n"); // prints text
+ 	char doubleString[BUFFER_SIZE]; // collects input in the variable until 80 characters
+ 	double doubleNumber; // to store the converted double
+diff --git a/converting.h b/converting.h
+new file mode 100644
+index 0000000..2a7771d
+--- /dev/null
++++ b/converting.h
+@@ -0,0 +1,23 @@
++// CONVERTING MODULE HEADER
++
++/*
++Author: Lena Park,
++email:lpark9@myseneca
++ID:127390235
++Date written: Nov 29
++Course: CPR101
++Project: Final Group Project
++[executable filename]: converting.c
++[title of program]: converting
++Purpose: It is a function that converts a string of integers into ASCII integer variables.
++*/
++#ifndef _CONVERTING_H_
++#define _CONVERTING_H_
++
++#include <stdio.h>
++#include <string.h>
++#include <stdlib.h>
++
++void converting(void);
++
++#endif
+\ No newline at end of file
+
+commit 17f7f9b4389de7a7525dfbf2cf806fd305a0e7e2
+Author: Lena <lpark9@myseneca.com>
+Date:   Fri Dec 8 19:40:05 2023 -0500
+
+    v1
+
+diff --git a/converting.c b/converting.c
+index e6b55e7..1f51d0f 100644
+--- a/converting.c
++++ b/converting.c
+@@ -3,26 +3,26 @@
+ #define BUFFER_SIZE 80
+ #include "converting.h"
+ 
+-// V1
++// V2
+ void converting(void)
+ {
+-	printf("*** Start of Converting Strings to int Demo ***\n"); // prints text
+-	char intString[BUFFER_SIZE]; // collects input in the variable until 80 characters
+-	int intNumber; // to store the converted integer
++	printf("*** Start of Converting Strings to double Demo ***\n"); // prints text
++	char doubleString[BUFFER_SIZE]; // collects input in the variable until 80 characters
++	double doubleNumber; // to store the converted double
+ 
+ 	do
+ 	{
+-		printf("Type an int numeric string (q - to quit) :\n"); // prompts user to enter input or quit
+-		fgets(intString, BUFFER_SIZE, stdin); // read the user's input and store it in intString array. It reads up to BUFFER_SIZE - 1 (null terminator)
++		printf("Type an double numeric string (q - to quit) :\n"); // prompts user to enter input or quit
++		fgets(doubleString, BUFFER_SIZE, stdin); // read the user's input and store it in doubleString array. It reads up to BUFFER_SIZE - 1 (null terminator)
+ 
+-		intString[strlen(intString) - 1] = '\0'; // removes the null terminitor
++		doubleString[strlen(doubleString) - 1] = '\0'; // removes the null terminitor
+ 
+-		if (strcmp(intString, "q") != 0) // compared input and checks if user quits or else it converts the string of integers into ASCII integer
++		if (strcmp(doubleString, "q") != 0) // compared input and checks if user quits or else it converts the string of double into ASCII double
+ 		{
+-			intNumber = atoi(intString); // atio function is the converter
+-			printf("Converted number is %d\n", intNumber);
++			doubleNumber = atof(doubleString); // atof function is the converter
++			printf("Converted number is %f\n", doubleNumber); //prints double number
+ 		}
+-	} while (strcmp(intString, "q") != 0); // loops until user enters 'q'
++	} while (strcmp(doubleString, "q") != 0); // loops until user enters 'q'
+ 
+ 	printf("*** End of Converting Strings to int Demo ***\n\n"); //ending message
+-}
++}
+\ No newline at end of file
+
+commit c798c512c985f3333bf651ed00db558466dc119a
+Author: Lena <lpark9@myseneca.ca.com>
+Date:   Fri Dec 8 19:35:54 2023 -0500
+
+    v1
+
+diff --git a/converting.c b/converting.c
+new file mode 100644
+index 0000000..e6b55e7
+--- /dev/null
++++ b/converting.c
+@@ -0,0 +1,28 @@
++// CONVERTING MODULE SOURCE
++#define _CRT_SECURE_NO_WARNINGS
++#define BUFFER_SIZE 80
++#include "converting.h"
++
++// V1
++void converting(void)
++{
++	printf("*** Start of Converting Strings to int Demo ***\n"); // prints text
++	char intString[BUFFER_SIZE]; // collects input in the variable until 80 characters
++	int intNumber; // to store the converted integer
++
++	do
++	{
++		printf("Type an int numeric string (q - to quit) :\n"); // prompts user to enter input or quit
++		fgets(intString, BUFFER_SIZE, stdin); // read the user's input and store it in intString array. It reads up to BUFFER_SIZE - 1 (null terminator)
++
++		intString[strlen(intString) - 1] = '\0'; // removes the null terminitor
++
++		if (strcmp(intString, "q") != 0) // compared input and checks if user quits or else it converts the string of integers into ASCII integer
++		{
++			intNumber = atoi(intString); // atio function is the converter
++			printf("Converted number is %d\n", intNumber);
++		}
++	} while (strcmp(intString, "q") != 0); // loops until user enters 'q'
++
++	printf("*** End of Converting Strings to int Demo ***\n\n"); //ending message
++}

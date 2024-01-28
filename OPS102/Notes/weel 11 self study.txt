@@ -1,0 +1,49 @@
+-f = check if file exist
+-d = check if directory exist
+-s = check if file exist and <0 bytes
+-r = check if it exist and has +r permission
+-w = +w
+-x = +x
+
+numbers only
+-lt = less than
+-le = less than or equal to
+-gt = greater
+-ge = greater than or equal to
+-eq = equal to
+-ne =  not equal to
+
+#!/bin/bash
+
+fileInQuestion=$1
+
+if [ $# != 1 ] 
+then
+	echo "Please Enter Only One Argument"
+fi
+
+if [ -s $fileInQuestion ]
+then
+	echo "$fileInQuestion does already exist"
+	exit 2
+else
+	echo "$fileInQuestion does NOT exist"
+	touch $fileInQuestion
+	echo "...but now it does"
+	exit 3
+fi
+
+#!/bin/bash
+
+echo "2+4 = $(( 2 + 4 )) "
+
+a=10
+b=5
+
+result=$(( $a + $b ))
+echo "$a + $b = $result"
+
+if [ $result -gt 10 ]
+then
+	echo "The sum is less than 10"
+fi

@@ -1,0 +1,74 @@
+OPS102 | Saso Kocev | Week 3 - Day 1 - 09.18.23
+
+Review:
+mv homework/friday/lab1 homework/friday/lab1
+(you can move from directory to directory from home dir using relative path)
+
+mv /home/saso.kocev/ndm/homework/friday/Lab1 /home/saso.kocev/ndm/homework/Test1
+(you can move from directory to directory from home dir using absolute path)
+
+mkdir ~/ndm/monday
+(making a directory relative to home)
+
+You can mix relative paths, relative to home and absolute path
+Clarifications:
+does absolute always start in the root directory? Yes (always with a / linux)
+. - means current directory in linux
+always know which path you are going to use
+
+Text readers:
+can file
+more file - You can scroll down with the file with enter(scroll down), space (the last line)
+less file - You can scroll up and down with arrow keys, enter(scroll down, space (the last line)
+cat -n file - shows line numbers in the side of the text (if you wanna know the specific line number of a text) 
+head -5(no. of lines) file - only shows the first five or number of lines in a file
+tail -5(no. of lines) file - only shows the last five or number of lines in a file
+
+Shortcuts:
+You can create multiple file or directories like this: touch file1 file2 file3
+you can see a specific file using ls and typing there filename: ls file1
+
+Wildcard:
+* - Matches ANY character/number
+See all files sharing a similar names: ls file* (for prefix) ls *.txt(for suffix) 
+
+? - matches ONE character
+?? - matche TWO characters
+...
+See all files sharing a similar names but only with one extra charater: ls file* (for prefix) ls *.txt(for suffix) 
+
+[class] - matches with any of the specifics characters inside the box but not both of the same time (case sensitive)
+ls file[ABCD] - fileA  fileB fileC not fileABC
+ls file[A-Z] - fileA fileB ... (can only be in order cant type backwards [Z-A] = error)
+ls file[0-3] - file0 file1 (always start with 0 just good practice)
+To add new characters you add another [class][class]
+ls file[1][1] = file11 or ls file[0-3][1-2] or ls file[abc][abc][abc]
+
+for IPC 
+To view file and see mistakes: 
+ w1p1.c
+Explanation of compiling in Linux
+gcc(compiler) -Wall(shows debugs/mistakes) w1p1.c(choose the file to compile) -o(output) w1p1(new file name the .exe)
+To make changes: remove (rm)> edit (nano)> recompile
+~prof.name/blah/submit/w1 - Checks for needed output of the coding file (the .c file) and compiles.
+
+Day 2
+! - means you dont want to see those letters or numbers ls file [!ABC]
+
+* - you can also use this to move and delete multiple files rm file* 
+
+Commands:
+Find [folder] -name ["filename"] - To search to a file name ex. find ~/ndm -name -"file.txt"
+i - ignore cae sensitivity
+Find ~/ndm -iname "file*" - searches all files starting with file regardless of capilization and numbers
+
+grep - opens texts and finds the word ex. grep -i "seneca" file.txt
+grep -r "seneca" ~/ndm - -r looks for texts in multiple files in a directory
+find . -iname "file.txt" - finds files in directories
+
+you can combine i and r for -ir for looking for many files in a directory ignoring the case sensitivity
+
+tr - translate or change character in linux cli ex. tr 'e' 'X' < file.txt  it replaces all the e's with X's in the file text.
+
+ex. tr 'a-z' 'A-Z < file.txt changes all lowercase characters to uppercase.
+tr '0-9' '*' < file.txt

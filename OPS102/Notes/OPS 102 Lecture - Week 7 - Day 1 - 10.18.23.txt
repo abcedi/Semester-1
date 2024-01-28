@@ -1,0 +1,34 @@
+grep - find a key word (example grep "nutella" food.txt - if you want to search in a specific help or grep -r "nutella" ~/ndm - you want to scan multple files in a recursive order meaing going down sub folders to search for words)
+find - looks for file names (example: find ~ -name "thursday.txt") command > file location to start > -name or -iname > file name
+- only goes down directories
+
+sort text.txt - sorts alphabetically
+sort -n num.txt - -n for sort numeric values
+sort -nr num.txt - -r for reverse 
+sort -f food.txt - -f sort dismissing capitilazation
+
+tail -f food.txt - shows update lines
+tail -f food.txt & - & makes it run in the background
+
+>  overwrite export
+>> append
+2> shows the errors overwrite
+2>> shows the errors append
+<  import
+
+what courses you teach
+who was the teacher that made the videos
+
+For OOP I would either recommend Fardad Soleimanloo or Chris Szalwinski. For WEB, definitely go with David Humphrey. These three professors really know their stuff and they are good at teaching.
+
+Try to avoid Nargis Khan at all costs.
+
+I am definitely taking OSD600, and then 700 next semester.
+
+focus on permissions, tree
+ 
+eric brower
+
+is ! counted as wildcards
+what ps version are we most likely to use
+what and where do we use -r only for grep?

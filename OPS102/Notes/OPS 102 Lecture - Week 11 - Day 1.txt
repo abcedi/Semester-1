@@ -1,0 +1,176 @@
+quiz on thursday
+fill in the blanks code
+same format
+last week lecture
+
+claculations:
+
+#!/bin/bash
+
+echo "2+4 = $(( 2 + 4 )) // what is the reason why put $ sign in calculation
+
+a=10
+b=5
+
+result=$(( $a + $b ))
+echo "$a + $b = $result"
+
+Loops:
+
+#!/bin/bash
+
+for VARIABLE in .... (items + number of iiterations)
+do
+	...
+	...
+done
+
+Loops example (coder input):
+
+#!/bin/bash
+
+for colous in blue green pink
+do	
+	echo "----------"
+	echo $colours
+	echo "----------"
+done
+
+
+Loops example (user input):
+
+#!/bin/bash
+
+for colous in $1 $2 $3
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo //new line
+done
+
+Loops example (user input/multiple arguments):
+
+#!/bin/bash
+
+for colous in $@
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo // new line
+	read // for pause
+done
+
+#@ = All Arguments individually
+#* = All Arguments individually
+
+#!/bin/bash
+
+for colous in $@
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo // new line
+	read // for pause
+done
+
+#@ = All Arguments individually
+#* = All Arguments individually
+
+#!/bin/bash
+
+for colous in "$*"
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo // new line
+	read // for pause
+done
+
+"$*" = All Arguments as on item (no matter how many you put it will be one)
+"$@" = All Arguments as on item (reads spaces but you have to put "")
+
+for colous in "$*"
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo // new line
+	read // for pause
+done
+
+./colours.sh dog cat goat
+prints
+dog cat goat // as one
+
+for colous in "$@"
+do	
+	echo "----------"
+	echo $animal
+	echo "----------"
+	echo // new line
+	read // for pause
+done
+./colours.sh "dog cat" goat
+prints
+dog cat 
+goat
+
+
+Example:
+#!/bin/bash
+
+if [ $# = 0]
+then
+	echo "Error! Run the script with some arguments"
+exit 1
+fi
+
+echo
+echo "Entering Loop..."
+
+for animals in $@
+do
+	echo "-----------------------------------------"
+	echo "Current Value for 'animals' is $animals"
+	allAnimals=$allAnimals" "$animals //var1=555 var1=$var1
+	echo "So far we have $allAnimals"
+	echo "-----------------------------------------"
+	read
+done
+
+echo
+echo "Exitting loop Loop"
+echo "Everything: $allAnimals"
+
+terminal to windows
+left click and highlight everything
+press left click again
+
+windows to terminal
+copy
+right click
+
+while [codition] // if true run again
+do
+	...
+	...
+done
+
+while loop:
+
+#!/bin/bash
+
+counter=0
+
+while [ $counter -lt 10]
+do
+	echo $counter
+	counter=$(( $counter + 1 ))
+	read
+done
+
+

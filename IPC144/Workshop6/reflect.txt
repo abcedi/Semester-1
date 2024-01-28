@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #6
+Full Name  : Abcedi Ilacas
+Student ID#: 138180211
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1) Iteration constructs, such as for, while, and do-while, provide flexibility to programmers to choose the most suitable one depending on the context. 
+Even though they can be made to behave similarly, each has its own unique use case:
+
+-for loops are typically favored when working with arrays because the number of iterations is known beforehand, making it concise and clear. 
+In arrays, we often iterate through each element exactly once, so for provides a clear start, end, and iteration pattern.
+
+-while loops are more generic and are best when the number of iterations is determined by a condition that is evaluated before the start of every iteration.
+
+-do-while loops ensure that the loop body executes at least once before checking the condition. 
+This is useful in scenarios where an action must be done before a condition can be evaluated, like user input validation.
+
+While all loops can be interchanged with some adjustments, using the right loop makes the code more readable and intuitive.
+
+2)To test my program, I executed it with the "YELLOW highlighted user-input data for submission" from the workshop instructions. 
+
+Debugging:
+
+-for syntactic problems, I relied on the compiler error messages. These messages usually pinpoint the location and nature of the error. 
+I would then navigate to the reported line number and correct the syntax.
+
+-for semantic problems, which are logic errors, I used print statements to display variable values at different points in the code. 
+This helped me track the flow of execution and identify where the logic was deviating from the expected. 
+Once located, I revisited my logic and made necessary corrections.
+
+3)
+Identifying the Error
+1. Read the Error Message: The first step in debugging is to understand what the error message is saying. 
+The message states that on line number 6 of your output, it was expecting "$0" but got "$5567.89" instead. 
+It also says the ASCII character code is different at column 33.
+
+2. Locate Line Number 6: Open the code and locate where the output for line number 6 is generated. 
+This will help me know which part of the code is causing the error.
+
+3. Check Output Files: Open the output.txt and w6p2_master_output.txt files in the specified directory. 
+Compare the two to understand where they differ. My output should match the w6p2_master_output.txt file.
+
+Fixing the Error
+1. Isolate the Issue: Now that I've identified the line in my code responsible for the mismatch, I would isolate the part of the code that's generating the incorrect output.
+
+2. Modify the Code: Since the expected output is "$0", I would modify my code to make sure it outputs this value at line number 6. 
+It's possible I may be reading an incorrect variable or have a calculation error that's resulting in "$5567.89" instead of "$0".
+
+3. Update the ASCII Code: The error message also mentions an ASCII code mismatch. I would double-check my code to make sure the correct ASCII character (in this case, ASCII code 48, which is '0') is printed.
+
+4. Test Locally: Before submitting, ill run my code locally and validate the output by comparing it to the w6p2_master_output.txt. 
+I'll make sure the output matches exactly, paying attention to any extra spaces or characters.
+
+5. Resubmit: After I've confirmed that my output matches the expected output, I would go ahead and resubmit my work.

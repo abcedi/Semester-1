@@ -1,0 +1,4 @@
+﻿  core.c
+E:\IPC144\MS1\core.c(142,17): warning C4013: 'strlen' undefined; assuming extern returning int
+E:\IPC144\MS1\core.c(161,2): warning C4013: 'strncpy' undefined; assuming extern returning int
+  a1ms1.vcxproj -> E:\IPC144\MS1\x64\Debug\a1ms1.exe

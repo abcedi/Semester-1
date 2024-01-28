@@ -1,0 +1,114 @@
+// MANIPULATING SOURCE
+#define _CRT_SECURE_NO_WARNINGS
+#define BUFFER_SIZE 80 // the size of the character array
+#include "manipulating.h" // includes header
+
+#include <stdio.h>
+#include <string.h>
+
+/* Version 1 */
+void manipulating(void)
+{
+	printf("*** Start of Concatenating Strings Demo ***\n");
+
+	char string1[BUFFER_SIZE]; // declares the variables where to store the input
+	char string2[BUFFER_SIZE]; // the string can hold upto 80 characters
+
+	do {
+		printf("Type the 1st string (q - to quit):\n");
+		fgets(string1, BUFFER_SIZE, stdin); // reads the input and stores it into string1 array. Read upto the maximum size which is 80 using standard input. 
+		string1[strlen(string1) - 1] = '\0'; // reads the input and counts the string length and removes the last position which is the null terminator.
+
+		if ((strcmp(string1, "q") != 0)) { // if the user does not input q this condition will run
+
+			printf("Type the 2nd string:\n");
+
+			fgets(string2, BUFFER_SIZE, stdin); // (for string2) reads the input and stores it into string1 array. Read upto the maximum size which is 80. 
+
+			string2[strlen(string2) - 1] = '\0'; // (for string2) reads the input and counts the string length and removes the last position which is the null terminator.
+
+			strcat(string1, string2); // combines the two strings to string1
+			printf("Concatenated string is \'%s\'\n", string1);
+		}
+	} while (strcmp(string1, "q") != 0); // loops until user inputs 0
+
+	printf("*** End of Concatenating Strings Demo ***\n\n");
+
+	/* Version 2 */
+
+	printf(" *** Start of Comparing Strings Demo *** \n");
+	char compare1[BUFFER_SIZE]; // Creates 2 character arrays that acts like a string.
+	char compare2[BUFFER_SIZE]; // The string can hold upto 80 characters.
+	int result; // Stores to result of comparison
+
+	do
+	{
+		printf("Type the 1st string to compare (q - to quit) :\n");
+		fgets(compare1, BUFFER_SIZE, stdin); // Reads the input and stores it into compare1. Read upto the maximum size which is 80 using standard input. 
+		compare1[strlen(compare1) - 1] = '\0'; // Counts the string length and removes the newline character ('\n') from the end of the string.
+
+		if (strcmp(compare1, "q") != 0) // Checks if user didn't press "q"
+		{
+			printf("Type the 2nd string to compare: \n");
+			fgets(compare2, BUFFER_SIZE, stdin); // Reads another input and stores it into compare2. Read upto the maximum size which is 80 using standard input.
+			compare2[strlen(compare2) - 1] = '\0'; // Counts the string length and removes the newline character ('\n') from the end of the string.
+
+			result = strcmp(compare1, compare2); // The function strcmp compares the compare1 and compare2 ASCII values of the string. It stores everythign in result.
+
+			if (result < 0)  // If compare1 is less than compare2
+			{
+				printf("\'%s\' string is less than \'%s\'\n", compare1, compare2);
+			}
+			else if (result == 0) // If the strings have the same value
+			{
+				printf("\'%s\' string is equal to \'%s\'\n", compare1, compare2);
+			}
+			else //  If compare1 is greater than compare2
+			{
+				printf("\'%s\' string is greater than \'%s\'\n", compare1, compare2);
+			}
+		}
+	} while (strcmp(compare1, "q") != 0); // Continues loop until "q" is pressed
+
+	printf(" *** End of Comparing Strings Demo *** \n\n");
+
+	/* Version 3 */
+
+	printf(" *** Start of Searching Strings Demo *** \n");
+	char  haystack[BUFFER_SIZE]; // An array that will act as the main array where we find first occurence of the letter.
+	char  needle[BUFFER_SIZE]; // An array to store the substring that we want to find
+	char* occurrence = NULL; // A pointer that will point to the location where the substring is found in the main string and if not it will continue to be null.
+
+	do
+	{
+		printf("Type the string (q - to quit) :\n"); // prompts use to type a string or "q" to quit
+		fgets(haystack, BUFFER_SIZE, stdin); // Uses the fgets to read the input(standard input) and stores it into haystack. Reads upto the maximum size which is 80 using standard input. 
+		haystack[strlen(haystack) - 1] = '\0'; // Counts the string length and removes the newline character ('\n') from the end of the string.
+
+		if (strcmp(haystack, "q") != 0) // Checks if user didn't press "q"
+		{
+			printf("Type the substring:\n"); // prompts user to type what to find in the main string
+			fgets(needle, BUFFER_SIZE, stdin); // Uses the fgets library function to read the user's input with stdin(standard input) and stores it in needle. Read upto the maximum size which is 80 using standard input. 
+			needle[strlen(needle) - 1] = '\0'; // Counts the string length and removes the newline character ('\n') from the end of the string.
+			occurrence = strstr(haystack, needle); // The strstr function is used to find the first occurrence of the substring (needle) in the main string (haystack). The result is stored in the occurrence pointer.
+
+			if (occurrence) // If the occurrence pointer is not NULL, it means that the substring was found in the main string.
+			{
+				printf("\'%s\' found at %d position\n", needle,
+					(int)(occurrence - haystack)); // calculates the position of the substring in the main string. This offset is then cast to an integer because it represents the position as an index in the array.
+			}
+			else // If the occurrence is a NULL, it means it was not found.
+			{
+				printf("Not found\n");
+			}
+		}
+	} while (strcmp(haystack, "q") != 0); // Continues loop until "q" is pressed
+
+	printf(" *** End of Searching Strings Demo *** \n\n");
+}
+
+
+
+
+
+

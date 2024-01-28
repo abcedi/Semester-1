@@ -1,0 +1,410 @@
+commit ffcc293ceb15ef173f8080df25af0de8ad6f4dd0
+Author: Kittikhun <kkomonpis@myseneca.ca>
+Date:   Thu Dec 7 10:36:47 2023 -0500
+
+    v3
+
+diff --git a/tokenizing-test-cases.xlsx b/tokenizing-test-cases.xlsx
+index 2f4b2f6..18c1159 100644
+Binary files a/tokenizing-test-cases.xlsx and b/tokenizing-test-cases.xlsx differ
+diff --git a/tokenizing-testing.txt b/tokenizing-testing.txt
+index 695d989..8b69fcf 100644
+--- a/tokenizing-testing.txt
++++ b/tokenizing-testing.txt
+@@ -9,19 +9,19 @@ Type a few words separated by space (q - to quit):
+ Testing
+ Word #1 is 'Testing'
+ Type a few words separated by space (q - to quit):
+-Testing word in put.
++Testing words in put.
+ Word #1 is 'Testing'
+-Word #2 is 'word'
++Word #2 is 'words'
+ Word #3 is 'in'
+ Word #4 is 'put.'
+ Type a few words separated by space (q - to quit):
+-Testing 3 word input S …
++Testing 3 words input S ...
+ Word #1 is 'Testing'
+ Word #2 is '3'
+-Word #3 is 'word'
++Word #3 is 'words'
+ Word #4 is 'input'
+ Word #5 is 'S'
+-Word #6 is '.'
++Word #6 is '...'
+ Type a few words separated by space (q - to quit):
+ 
+ Type a few words separated by space (q - to quit):
+@@ -50,11 +50,44 @@ Type a few phrases separated by comma (q - to quit):
+ Type a few phrases separated by comma (q - to quit):
+ ,,testing,,,
+ Phrase #1 is 'testing'
++Type a few phrases separated by comma (q - to quit):
++
+ Type a few phrases separated by comma (q - to quit):
+ q
+ *** End of Tokenizing Phrases DEMO ***
+ 
++*** Start of Tokenizing Sentences DEMO ***
++Type a few sentences separated by dot (q - to quit);
++Hi, Testing time with phrases counter, In CPR101 PROJECT
++Sentence #1 is 'Hi, Testing time with phrases counter, In CPR101 PROJECT'
++Type a few sentences separated by dot (q - to quit);
++Hi, Testing time with phrases counter. In CPR101 PROJECT
++Sentence #1 is 'Hi, Testing time with phrases counter'
++Sentence #2 is ' In CPR101 PROJECT'
++Type a few sentences separated by dot (q - to quit);
++Hi, Testing time with phrases counter. In CPR101 PROJECT. This is version 3.
++Sentence #1 is 'Hi, Testing time with phrases counter'
++Sentence #2 is ' In CPR101 PROJECT'
++Sentence #3 is ' This is version 3'
++Type a few sentences separated by dot (q - to quit);
++.
++Type a few sentences separated by dot (q - to quit);
++......
++Type a few sentences separated by dot (q - to quit);
++.,.. .test..a.Hi. I am testing.
++Sentence #1 is ','
++Sentence #2 is ' '
++Sentence #3 is 'test'
++Sentence #4 is 'a'
++Sentence #5 is 'Hi'
++Sentence #6 is ' I am testing'
++Type a few sentences separated by dot (q - to quit);
++
++Type a few sentences separated by dot (q - to quit);
++q
++*** End of Tokenizing Senrences DEMO ***
++
+ 
+-D:\Seneca\Semester1\CPR101\Project\Tokenizing\x64\Debug\Torkenizing.exe (process 19604) exited with code 0.
+-To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
++D:\Seneca\Semester1\CPR101\Project\Tokenizing\x64\Debug\Torkenizing.exe (process 5040) exited with code 0.
++To automatically close the console when debugging stops,enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+ Press any key to close this window . . .
+diff --git a/tokenizing.c b/tokenizing.c
+index a87b1a5..4eecbb6 100644
+--- a/tokenizing.c
++++ b/tokenizing.c
+@@ -3,24 +3,22 @@
+ #include <string.h>
+ #include "tokenizing.h"
+ 
+-#define BUFFER_SIZE 300
++#define BUFFER_SIZE 1000
+ 
+ // Tokenizing words/phases and sentense in a string by using specific characters to be delimiter //
+ void tokenizing() 
+ {
+ /* Version 1 */
+-char words[BUFFER_SIZE];		   		  // Declare a character array to store the words
+-char* nextWord = NULL;					  // Declare a pointer to point to the next word in the string
+-int wordCounter;						  // Declare a counter to keep track of the number of words
++char words[BUFFER_SIZE];
++char* nextWord = NULL;
++int wordCounter;
+ 
+ printf("*** Start of Tokenizing Word DEMO ***\n");
+-
+ do										  // Loop until the user types 'q' to quit
+ {
+ 	printf("Type a few words separated by space (q - to quit): \n");
+ 	fgets(words, BUFFER_SIZE, stdin);     // Read the user input into the words array
+ 	words[strlen(words) - 1] = '\0';      // Remove the newline character at the end of the string
+-	
+ 	if (strcmp(words, "q") != 0)		  // If the user didn't type 'q' to quit
+ 	{
+ 		nextWord = strtok(words, " ");    // Tokenize the string into words separated by space
+@@ -37,33 +35,56 @@ do										  // Loop until the user types 'q' to quit
+ printf("*** End of Tokenizing words DEMO ***\n\n");
+ 
+ /* Version 2 */
+-printf("*** Start of Tokenizing Phrases DEMO ***\n");
+ char phrases[BUFFER_SIZE];
+ char* nextPhrases = NULL;
+ int phrasesCounter;
+ 
+-do										  // Loop until the user types 'q' to quit
++printf("*** Start of Tokenizing Phrases DEMO ***\n");
++do										     // Loop until the user types 'q' to quit
+ {
+ 	printf("Type a few phrases separated by comma (q - to quit):\n");
+-	fgets(phrases, BUFFER_SIZE, stdin);	  // Read the user input into the phrases array
+-	phrases[strlen(phrases) - 1] = '\0';  // Remove the newline character at the end of the string
+-	if ((strcmp(phrases, "q") != 0))      // If the user didn't type 'q' to quit
++	fgets(phrases, BUFFER_SIZE, stdin);	     // Read the user input into the phrases array
++	phrases[strlen(phrases) - 1] = '\0';     // Remove the newline character at the end of the string
++	if ((strcmp(phrases, "q") != 0))         // If the user didn't type 'q' to quit
+ 	{
+ 		// Tokenize the string into phrases separated by comma
+ 		nextPhrases = strtok(phrases, ",");
+-		phrasesCounter = 1;				  // Initialize the phrase counter
+-		while (nextPhrases)				  // Loop until there are no more phrases
++		phrasesCounter = 1;				     // Initialize the phrase counter
++		while (nextPhrases)				     // Loop until there are no more phrases
+ 		{
+ 			printf("Phrase #%d is \'%s\'\n", // Print the current phrase
+ 				phrasesCounter++, nextPhrases);
+ 			nextPhrases = strtok(NULL, ","); // Get the next phrase
+ 		}
+ 	}
+-} while (strcmp(phrases, "q") != 0);	  // Continue the loop until the user types 'q' to quit
++} while (strcmp(phrases, "q") != 0);	     // Continue the loop until the user types 'q' to quit
+ printf("*** End of Tokenizing Phrases DEMO ***\n\n");
+ 
+ /* Version 3 */
+-//>> insert here
++char sentences[BUFFER_SIZE];
++char* nextSentence = NULL;
++int sentencesCounter;
++
++printf("*** Start of Tokenizing Sentences DEMO ***\n");
++do										      // Loop until the user types 'q' to quit
++{
++	printf("Type a few sentences separated by dot (q - to quit);\n");
++	fgets(sentences, BUFFER_SIZE, stdin);     // Read the user input into the sentence array
++	sentences[strlen(sentences) - 1] = '\0';  // Remove the newline character at the end of the string
++	if (strcmp(sentences, "q") != 0)		  // If the user didn't type 'q' to quit
++	{
++		// Tokenize the string into sentences separated by comma
++		nextSentence = strtok(sentences, ".");
++		sentencesCounter = 1;			      // Initialize the sentence counter
++		while (nextSentence)				  // Loop until there are no more sentences
++		{
++			printf("Sentence #%d is \'%s\'\n",// Print the current sentence
++				sentencesCounter++, nextSentence);
++			nextSentence = strtok(NULL, "."); // Get the next sentence
++		}
++	}
++} while (strcmp(sentences, "q") != 0);        // Continue the loop until the user types 'q' to quit
++printf("*** End of Tokenizing Sentences DEMO ***\n\n");
+ 
+ 
+ }
+\ No newline at end of file
+
+commit 0801cab3782ff1f193de9c5a4d4fee93a0138c28
+Author: Kittikhun <kkomonpis@myseneca.ca>
+Date:   Mon Dec 4 18:36:09 2023 -0500
+
+    v2
+
+diff --git a/tokenizing-test-cases.xlsx b/tokenizing-test-cases.xlsx
+new file mode 100644
+index 0000000..2f4b2f6
+Binary files /dev/null and b/tokenizing-test-cases.xlsx differ
+diff --git a/tokenizing-testing.txt b/tokenizing-testing.txt
+new file mode 100644
+index 0000000..695d989
+--- /dev/null
++++ b/tokenizing-testing.txt
+@@ -0,0 +1,60 @@
++=================================
++===TESTING TOKENIZING FUNCTION===
++=================================
++*** Start of Tokenizing Word DEMO ***
++Type a few words separated by space (q - to quit):
++t
++Word #1 is 't'
++Type a few words separated by space (q - to quit):
++Testing
++Word #1 is 'Testing'
++Type a few words separated by space (q - to quit):
++Testing word in put.
++Word #1 is 'Testing'
++Word #2 is 'word'
++Word #3 is 'in'
++Word #4 is 'put.'
++Type a few words separated by space (q - to quit):
++Testing 3 word input S …
++Word #1 is 'Testing'
++Word #2 is '3'
++Word #3 is 'word'
++Word #4 is 'input'
++Word #5 is 'S'
++Word #6 is '.'
++Type a few words separated by space (q - to quit):
++
++Type a few words separated by space (q - to quit):
++
++Type a few words separated by space (q - to quit):
++q
++*** End of Tokenizing words DEMO ***
++
++*** Start of Tokenizing Phrases DEMO ***
++Type a few phrases separated by comma (q - to quit):
++Testing time with phrases counter
++Phrase #1 is 'Testing time with phrases counter'
++Type a few phrases separated by comma (q - to quit):
++Tesing time, with phrases counter
++Phrase #1 is 'Tesing time'
++Phrase #2 is ' with phrases counter'
++Type a few phrases separated by comma (q - to quit):
++Hi, Tesing time, with phrases counter,
++Phrase #1 is 'Hi'
++Phrase #2 is ' Tesing time'
++Phrase #3 is ' with phrases counter'
++Type a few phrases separated by comma (q - to quit):
++,
++Type a few phrases separated by comma (q - to quit):
++,,,,,
++Type a few phrases separated by comma (q - to quit):
++,,testing,,,
++Phrase #1 is 'testing'
++Type a few phrases separated by comma (q - to quit):
++q
++*** End of Tokenizing Phrases DEMO ***
++
++
++D:\Seneca\Semester1\CPR101\Project\Tokenizing\x64\Debug\Torkenizing.exe (process 19604) exited with code 0.
++To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
++Press any key to close this window . . .
+diff --git a/tokenizing.c b/tokenizing.c
+index 0e07da6..a87b1a5 100644
+--- a/tokenizing.c
++++ b/tokenizing.c
+@@ -5,18 +5,17 @@
+ 
+ #define BUFFER_SIZE 300
+ 
++// Tokenizing words/phases and sentense in a string by using specific characters to be delimiter //
+ void tokenizing() 
+ {
+ /* Version 1 */
+-
+ char words[BUFFER_SIZE];		   		  // Declare a character array to store the words
+ char* nextWord = NULL;					  // Declare a pointer to point to the next word in the string
+ int wordCounter;						  // Declare a counter to keep track of the number of words
+ 
+ printf("*** Start of Tokenizing Word DEMO ***\n");
+ 
+-// Loop until the user types 'q' to quit
+-do
++do										  // Loop until the user types 'q' to quit
+ {
+ 	printf("Type a few words separated by space (q - to quit): \n");
+ 	fgets(words, BUFFER_SIZE, stdin);     // Read the user input into the words array
+@@ -37,10 +36,31 @@ do
+ } while (strcmp(words, "q") != 0);
+ printf("*** End of Tokenizing words DEMO ***\n\n");
+ 
+-
+ /* Version 2 */
+-//>> insert here
++printf("*** Start of Tokenizing Phrases DEMO ***\n");
++char phrases[BUFFER_SIZE];
++char* nextPhrases = NULL;
++int phrasesCounter;
+ 
++do										  // Loop until the user types 'q' to quit
++{
++	printf("Type a few phrases separated by comma (q - to quit):\n");
++	fgets(phrases, BUFFER_SIZE, stdin);	  // Read the user input into the phrases array
++	phrases[strlen(phrases) - 1] = '\0';  // Remove the newline character at the end of the string
++	if ((strcmp(phrases, "q") != 0))      // If the user didn't type 'q' to quit
++	{
++		// Tokenize the string into phrases separated by comma
++		nextPhrases = strtok(phrases, ",");
++		phrasesCounter = 1;				  // Initialize the phrase counter
++		while (nextPhrases)				  // Loop until there are no more phrases
++		{
++			printf("Phrase #%d is \'%s\'\n", // Print the current phrase
++				phrasesCounter++, nextPhrases);
++			nextPhrases = strtok(NULL, ","); // Get the next phrase
++		}
++	}
++} while (strcmp(phrases, "q") != 0);	  // Continue the loop until the user types 'q' to quit
++printf("*** End of Tokenizing Phrases DEMO ***\n\n");
+ 
+ /* Version 3 */
+ //>> insert here
+diff --git a/tokenizing.h b/tokenizing.h
+index 00b7c75..3c71a6d 100644
+--- a/tokenizing.h
++++ b/tokenizing.h
+@@ -1,7 +1,7 @@
+ #ifdef _TOKENIZING_H_
+ #define _TOKENIZING_H_
+ 
+-// Tokenizing words in a string by using " "(space) to  be delimiter //
++// Tokenizing words/phases and sentense in a string by using specific characters to be delimiter //
+ void tokenizing(void);
+ 
+ #endif // _TOKENIZING_H_
+
+commit 7793de8050dfd6b0cb76ceee1d32fecbd276f1ee
+Author: Kittikhun <kkomonpis@myseneca.ca>
+Date:   Mon Dec 4 17:43:28 2023 -0500
+
+    v1
+
+diff --git a/tokenizing.c b/tokenizing.c
+new file mode 100644
+index 0000000..0e07da6
+--- /dev/null
++++ b/tokenizing.c
+@@ -0,0 +1,49 @@
++#define _CRT_SECURE_NO_WARNINGS
++#include <stdio.h>
++#include <string.h>
++#include "tokenizing.h"
++
++#define BUFFER_SIZE 300
++
++void tokenizing() 
++{
++/* Version 1 */
++
++char words[BUFFER_SIZE];		   		  // Declare a character array to store the words
++char* nextWord = NULL;					  // Declare a pointer to point to the next word in the string
++int wordCounter;						  // Declare a counter to keep track of the number of words
++
++printf("*** Start of Tokenizing Word DEMO ***\n");
++
++// Loop until the user types 'q' to quit
++do
++{
++	printf("Type a few words separated by space (q - to quit): \n");
++	fgets(words, BUFFER_SIZE, stdin);     // Read the user input into the words array
++	words[strlen(words) - 1] = '\0';      // Remove the newline character at the end of the string
++	
++	if (strcmp(words, "q") != 0)		  // If the user didn't type 'q' to quit
++	{
++		nextWord = strtok(words, " ");    // Tokenize the string into words separated by space
++		wordCounter = 1;				  // Initialize the word counter
++		
++		while (nextWord)				  // Loop until there are no more words
++		{
++			printf("Word #%d is \'%s\'\n",
++				wordCounter++, nextWord); // Print the current word
++			nextWord = strtok(NULL, " "); // Get the next word
++		}
++	}
++} while (strcmp(words, "q") != 0);
++printf("*** End of Tokenizing words DEMO ***\n\n");
++
++
++/* Version 2 */
++//>> insert here
++
++
++/* Version 3 */
++//>> insert here
++
++
++}
+\ No newline at end of file
+diff --git a/tokenizing.h b/tokenizing.h
+new file mode 100644
+index 0000000..00b7c75
+--- /dev/null
++++ b/tokenizing.h
+@@ -0,0 +1,7 @@
++#ifdef _TOKENIZING_H_
++#define _TOKENIZING_H_
++
++// Tokenizing words in a string by using " "(space) to  be delimiter //
++void tokenizing(void);
++
++#endif // _TOKENIZING_H_

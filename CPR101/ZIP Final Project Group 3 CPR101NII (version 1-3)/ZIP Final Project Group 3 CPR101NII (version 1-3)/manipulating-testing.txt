@@ -1,0 +1,159 @@
+*** Start of Concatenating Strings Demo ***
+Type the 1st string (q - to quit):
+Ashton
+Type the 2nd string:
+Seneca
+Concatenated string is 'AshtonSeneca'
+Type the 1st string (q - to quit):
+
+Type the 2nd string:
+
+Concatenated string is ''
+Type the 1st string (q - to quit):
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string:
+Concatenated string is 'Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Type the 1st string (q - to quit):
+a
+Type the 2nd string:
+b
+Concatenated string is 'ab'
+Type the 1st string (q - to quit):
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1
+Type the 2nd string:
+Concatenated string is 'Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1'
+Type the 1st string (q - to quit):
+!@#
+Type the 2nd string:
+$%^
+Concatenated string is '!@#$%^'
+Type the 1st string (q - to quit):
+123
+Type the 2nd string:
+456
+Concatenated string is '123456'
+Type the 1st string (q - to quit):
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string:
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Concatenated string is 'AaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+Type the 1st string (q - to quit):
+q
+*** End of Concatenating Strings Demo ***
+
+*** Start of Concatenating Strings Demo ***
+Type the 1st string (q - to quit):
+q
+*** End of Concatenating Strings Demo ***
+
+ *** Start of Comparing Strings Demo ***
+Type the 1st string to compare (q - to quit) :
+animal
+Type the 2nd string to compare:
+zebra
+'animal' string is less than 'zebra'
+Type the 1st string to compare (q - to quit) :
+animal
+Type the 2nd string to compare:
+animal
+'animal' string is equal to 'animal'
+Type the 1st string to compare (q - to quit) :
+dog
+Type the 2nd string to compare:
+cat
+'dog' string is greater than 'cat'
+Type the 1st string to compare (q - to quit) :
+giraffe
+Type the 2nd string to compare:
+goat
+'giraffe' string is less than 'goat'
+Type the 1st string to compare (q - to quit) :
+Cat
+Type the 2nd string to compare:
+cat
+'Cat' string is less than 'cat'
+Type the 1st string to compare (q - to quit) :
+
+Type the 2nd string to compare:
+
+'' string is equal to ''
+Type the 1st string to compare (q - to quit) :
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string to compare:
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' string is equal to 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Type the 1st string to compare (q - to quit) :
+1
+Type the 2nd string to compare:
+1
+'1' string is equal to '1'
+Type the 1st string to compare (q - to quit) :
+~
+Type the 2nd string to compare:
+
+'~' string is greater than ''
+Type the 1st string to compare (q - to quit) :
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string to compare:
+'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' string is greater than ''
+Type the 1st string to compare (q - to quit) :
+!@#
+Type the 2nd string to compare:
+$%^
+'!@#' string is less than '$%^'
+Type the 1st string to compare (q - to quit) :
+q
+ *** End of Comparing Strings Demo ***
+
+ *** Start of Searching Strings Demo ***
+Type the string (q - to quit) :
+I am a Seneca Student
+Type the substring:
+Seneca
+'Seneca' found at 7 position
+Type the string (q - to quit) :
+I am a Seneca Student
+Type the substring:
+S
+'S' found at 7 position
+Type the string (q - to quit) :
+I deserve an A+
+Type the substring:
+yes
+Not found
+Type the string (q - to quit) :
+Adam
+Type the substring:
+adam
+Not found
+Type the string (q - to quit) :
+Very Very Handsome ++"
+Type the substring:
++
+'+' found at 19 position
+Type the string (q - to quit) :
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+Type the substring:
+Not found
+Type the string (q - to quit) :
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+Type the substring:
+b
+'b' found at 77 position
+Type the string (q - to quit) :
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+Type the substring:
+'' found at 0 position
+Type the string (q - to quit) :
+a
+Type the substring:
+a
+'a' found at 0 position
+Type the string (q - to quit) :
+q
+ *** End of Searching Strings Demo ***
+
+
+C:\Users\migue\source\repos\CPR\C FIles\C Files\Manipulation\Version 1\x64\Debug\Version 1.exe (process 13540) exited with code 0.
+Press any key to close this window . . .
+

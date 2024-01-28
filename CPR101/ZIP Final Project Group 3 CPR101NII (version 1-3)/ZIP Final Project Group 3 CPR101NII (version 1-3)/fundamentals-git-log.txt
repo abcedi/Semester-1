@@ -1,0 +1,628 @@
+commit 4204ba59e6537a216fd2a3c47aaa363cc12b2fa6
+Author: John De Appolonia <jde-appolonia@myseneca.ca>
+Date:   Tue Dec 5 20:11:34 2023 -0500
+
+    version_2
+
+diff --git a/CP4P/fundamentalsV1.c b/CP4P/fundamentalsV1.c
+index baff304..d51c1c2 100644
+--- a/CP4P/fundamentalsV1.c
++++ b/CP4P/fundamentalsV1.c
+@@ -65,15 +65,67 @@ void fundamentals(void) {
+     printf("*** End of Indexing Strings Demo ***\n\n");
+ 
+     // V2
+-    //printf("*** Start of Measuring Strings Demo ***\n");
+-    //char buffer2[BUFFER_SIZE];
+-    //do {
+-    //    printf("Type a string (q - to quit):\n");
+-    //    fgets(buffer2, BUFFER_SIZE, stdin);
+-    //    buffer2[strlen(buffer2) - 1] = '\0';
+-    //    if (strcmp(buffer2, "q") != 0)
+-    //        printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
+-    //} while (strcmp(buffer2, "q") != 0);
++    printf("*** Start of Measuring Strings Demo ***\n");
++
++    // Declare character array to store user input strings
++    char buffer2[BUFFER_SIZE];
++
++    // Loop to prompt the user for input
++    do {
++        // Prompt for user input
++        printf("Type a string (q - to quit):\n");
++
++        // Read user input and store it in the buffer
++        fgets(buffer2, BUFFER_SIZE, stdin);
++
++        // Remove the newline character at the end of the input
++        buffer2[strlen(buffer2) - 1] = '\0';
++
++        // Check if the entered string is not equal to "q"
++        if (strcmp(buffer2, "q") != 0)
++            printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
++
++        // Continue the loop if the entered string is not "q"
++    } while (strcmp(buffer2, "q") != 0);
+ 
+     printf("*** End of Measuring Strings Demo ***\n\n");
++
++    // V3
++    printf("*** Start of Copying Strings Demo ***\n");
++
++    // Declare character arrays to store destination and source strings
++    char destination[BUFFER_SIZE];
++    char source[BUFFER_SIZE];
++
++    // Start a loop to repeatedly perform string copying operations
++    do {
++        // Reset the destination string to an empty string
++        destination[0] = '\0';
++        printf("Destination string is reset to empty\n");
++
++        // Prompt for user input (q - to quit)
++        printf("Type the source string (q - to quit):\n");
++
++        // Read user input and store it in the source buffer
++        fgets(source, BUFFER_SIZE, stdin);
++
++        // Remove the newline character at the end of the input
++        source[strlen(source) - 1] = '\0';
++
++        // Check if the entered source string is not equal to "q"
++        if (strcmp(source, "q") != 0) {
++            // Copy the contents of the source string to the destination string
++            strcpy(destination, source);
++
++            // Print the new destination string
++            printf("New destination string is \'%s\'\n", destination);
++        }
++
++        // Continue the loop if the entered source string is not "q"
++    } while (strcmp(source, "q") != 0);
++
++    // Print a message to indicate the end of the program
++    printf("*** End of Copying Strings Demo ***\n\n");
++
++
+ }
+diff --git a/CP4P/x64/Debug/CP4P.ilk b/CP4P/x64/Debug/CP4P.ilk
+index db25880..27bd617 100644
+Binary files a/CP4P/x64/Debug/CP4P.ilk and b/CP4P/x64/Debug/CP4P.ilk differ
+diff --git a/CP4P/x64/Debug/fundamentalsV1.obj b/CP4P/x64/Debug/fundamentalsV1.obj
+index 52a693b..4ffed15 100644
+Binary files a/CP4P/x64/Debug/fundamentalsV1.obj and b/CP4P/x64/Debug/fundamentalsV1.obj differ
+diff --git a/CP4P/x64/Debug/vc143.idb b/CP4P/x64/Debug/vc143.idb
+index 856200d..40ca2c2 100644
+Binary files a/CP4P/x64/Debug/vc143.idb and b/CP4P/x64/Debug/vc143.idb differ
+diff --git a/CP4P/x64/Debug/vc143.pdb b/CP4P/x64/Debug/vc143.pdb
+index 59a25e5..30a724b 100644
+Binary files a/CP4P/x64/Debug/vc143.pdb and b/CP4P/x64/Debug/vc143.pdb differ
+
+commit 4828c0be0a94b7c7abc6d9e5b50e5c7e00965936
+Author: John De Appolonia <jde-appolonia@myseneca.ca>
+Date:   Tue Dec 5 18:34:41 2023 -0500
+
+    version_1u2
+
+diff --git a/CP4P/x64/Debug/CP4P.exe.recipe b/CP4P/x64/Debug/CP4P.exe.recipe
+new file mode 100644
+index 0000000..b2446ab
+--- /dev/null
++++ b/CP4P/x64/Debug/CP4P.exe.recipe
+@@ -0,0 +1,11 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project>
++  <ProjectOutputs>
++    <ProjectOutput>
++      <FullPath>C:\VSprojects\CP4P\x64\Debug\CP4P.exe</FullPath>
++    </ProjectOutput>
++  </ProjectOutputs>
++  <ContentFiles />
++  <SatelliteDlls />
++  <NonRecipeFileRefs />
++</Project>
+\ No newline at end of file
+diff --git a/CP4P/x64/Debug/CP4P.ilk b/CP4P/x64/Debug/CP4P.ilk
+new file mode 100644
+index 0000000..db25880
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.ilk differ
+diff --git a/CP4P/x64/Debug/CP4P.log b/CP4P/x64/Debug/CP4P.log
+new file mode 100644
+index 0000000..4b9c868
+--- /dev/null
++++ b/CP4P/x64/Debug/CP4P.log
+@@ -0,0 +1,2 @@
++﻿  fundamentalsV1.c
++  CP4P.vcxproj -> C:\VSprojects\CP4P\x64\Debug\CP4P.exe
+diff --git a/CP4P/x64/Debug/CP4P.tlog/CL.command.1.tlog b/CP4P/x64/Debug/CP4P.tlog/CL.command.1.tlog
+new file mode 100644
+index 0000000..5db668e
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/CL.command.1.tlog differ
+diff --git a/CP4P/x64/Debug/CP4P.tlog/CL.read.1.tlog b/CP4P/x64/Debug/CP4P.tlog/CL.read.1.tlog
+new file mode 100644
+index 0000000..0331eb7
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/CL.read.1.tlog differ
+diff --git a/CP4P/x64/Debug/CP4P.tlog/CL.write.1.tlog b/CP4P/x64/Debug/CP4P.tlog/CL.write.1.tlog
+new file mode 100644
+index 0000000..a914774
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/CL.write.1.tlog differ
+diff --git a/CP4P/x64/Debug/CP4P.tlog/CP4P.lastbuildstate b/CP4P/x64/Debug/CP4P.tlog/CP4P.lastbuildstate
+new file mode 100644
+index 0000000..3f2d1d3
+--- /dev/null
++++ b/CP4P/x64/Debug/CP4P.tlog/CP4P.lastbuildstate
+@@ -0,0 +1,2 @@
++PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.31.31103:TargetPlatformVersion=10.0.19041.0:
++Debug|x64|C:\VSprojects\CP4P\|
+diff --git a/CP4P/x64/Debug/CP4P.tlog/link.command.1.tlog b/CP4P/x64/Debug/CP4P.tlog/link.command.1.tlog
+new file mode 100644
+index 0000000..45677ec
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/link.command.1.tlog differ
+diff --git a/CP4P/x64/Debug/CP4P.tlog/link.read.1.tlog b/CP4P/x64/Debug/CP4P.tlog/link.read.1.tlog
+new file mode 100644
+index 0000000..6806c84
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/link.read.1.tlog differ
+diff --git a/CP4P/x64/Debug/CP4P.tlog/link.write.1.tlog b/CP4P/x64/Debug/CP4P.tlog/link.write.1.tlog
+new file mode 100644
+index 0000000..0e7ea5d
+Binary files /dev/null and b/CP4P/x64/Debug/CP4P.tlog/link.write.1.tlog differ
+diff --git a/CP4P/x64/Debug/fundamentalsV1.obj b/CP4P/x64/Debug/fundamentalsV1.obj
+new file mode 100644
+index 0000000..52a693b
+Binary files /dev/null and b/CP4P/x64/Debug/fundamentalsV1.obj differ
+diff --git a/CP4P/x64/Debug/main.obj b/CP4P/x64/Debug/main.obj
+new file mode 100644
+index 0000000..300c541
+Binary files /dev/null and b/CP4P/x64/Debug/main.obj differ
+diff --git a/CP4P/x64/Debug/test_fundamentals.obj b/CP4P/x64/Debug/test_fundamentals.obj
+new file mode 100644
+index 0000000..7fda1ac
+Binary files /dev/null and b/CP4P/x64/Debug/test_fundamentals.obj differ
+diff --git a/CP4P/x64/Debug/vc143.idb b/CP4P/x64/Debug/vc143.idb
+new file mode 100644
+index 0000000..856200d
+Binary files /dev/null and b/CP4P/x64/Debug/vc143.idb differ
+diff --git a/CP4P/x64/Debug/vc143.pdb b/CP4P/x64/Debug/vc143.pdb
+new file mode 100644
+index 0000000..59a25e5
+Binary files /dev/null and b/CP4P/x64/Debug/vc143.pdb differ
+
+commit 3babd9b0341a6fc27a8c6dd0a7ba4896ecd34135
+Author: John De Appolonia <jde-appolonia@myseneca.ca>
+Date:   Tue Dec 5 18:30:27 2023 -0500
+
+    version_1u
+
+diff --git a/CP4P.sln b/CP4P.sln
+new file mode 100644
+index 0000000..f71b070
+--- /dev/null
++++ b/CP4P.sln
+@@ -0,0 +1,31 @@
++﻿
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio Version 17
++VisualStudioVersion = 17.1.32210.238
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CP4P", "CP4P\CP4P.vcxproj", "{DDD16CB6-1AAA-4516-BB86-8D582A831C85}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|x64 = Debug|x64
++		Debug|x86 = Debug|x86
++		Release|x64 = Release|x64
++		Release|x86 = Release|x86
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Debug|x64.ActiveCfg = Debug|x64
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Debug|x64.Build.0 = Debug|x64
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Debug|x86.ActiveCfg = Debug|Win32
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Debug|x86.Build.0 = Debug|Win32
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Release|x64.ActiveCfg = Release|x64
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Release|x64.Build.0 = Release|x64
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Release|x86.ActiveCfg = Release|Win32
++		{DDD16CB6-1AAA-4516-BB86-8D582A831C85}.Release|x86.Build.0 = Release|Win32
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++	GlobalSection(ExtensibilityGlobals) = postSolution
++		SolutionGuid = {1BE4B943-0D49-439C-A34F-BDE65BE2B583}
++	EndGlobalSection
++EndGlobal
+diff --git a/CP4P/CP4P.vcxproj b/CP4P/CP4P.vcxproj
+new file mode 100644
+index 0000000..a669419
+--- /dev/null
++++ b/CP4P/CP4P.vcxproj
+@@ -0,0 +1,152 @@
++<?xml version="1.0" encoding="utf-8"?>
++<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemGroup Label="ProjectConfigurations">
++    <ProjectConfiguration Include="Debug|Win32">
++      <Configuration>Debug</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|Win32">
++      <Configuration>Release</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Debug|x64">
++      <Configuration>Debug</Configuration>
++      <Platform>x64</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|x64">
++      <Configuration>Release</Configuration>
++      <Platform>x64</Platform>
++    </ProjectConfiguration>
++  </ItemGroup>
++  <PropertyGroup Label="Globals">
++    <VCProjectVersion>16.0</VCProjectVersion>
++    <Keyword>Win32Proj</Keyword>
++    <ProjectGuid>{ddd16cb6-1aaa-4516-bb86-8d582a831c85}</ProjectGuid>
++    <RootNamespace>CP4P</RootNamespace>
++    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
++    <ConfigurationType>Application</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
++    <ConfigurationType>Application</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
++    <ConfigurationType>Application</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
++    <ConfigurationType>Application</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v143</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>Unicode</CharacterSet>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
++  <ImportGroup Label="ExtensionSettings">
++  </ImportGroup>
++  <ImportGroup Label="Shared">
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++  </ImportGroup>
++  <PropertyGroup Label="UserMacros" />
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <LinkIncremental>true</LinkIncremental>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <LinkIncremental>false</LinkIncremental>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++    <LinkIncremental>true</LinkIncremental>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++    <LinkIncremental>false</LinkIncremental>
++  </PropertyGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <ClCompile>
++      <WarningLevel>Level3</WarningLevel>
++      <SDLCheck>true</SDLCheck>
++      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <ConformanceMode>true</ConformanceMode>
++    </ClCompile>
++    <Link>
++      <SubSystem>Console</SubSystem>
++      <GenerateDebugInformation>true</GenerateDebugInformation>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <ClCompile>
++      <WarningLevel>Level3</WarningLevel>
++      <FunctionLevelLinking>true</FunctionLevelLinking>
++      <IntrinsicFunctions>true</IntrinsicFunctions>
++      <SDLCheck>true</SDLCheck>
++      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <ConformanceMode>true</ConformanceMode>
++    </ClCompile>
++    <Link>
++      <SubSystem>Console</SubSystem>
++      <EnableCOMDATFolding>true</EnableCOMDATFolding>
++      <OptimizeReferences>true</OptimizeReferences>
++      <GenerateDebugInformation>true</GenerateDebugInformation>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
++    <ClCompile>
++      <WarningLevel>Level3</WarningLevel>
++      <SDLCheck>true</SDLCheck>
++      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <ConformanceMode>true</ConformanceMode>
++    </ClCompile>
++    <Link>
++      <SubSystem>Console</SubSystem>
++      <GenerateDebugInformation>true</GenerateDebugInformation>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
++    <ClCompile>
++      <WarningLevel>Level3</WarningLevel>
++      <FunctionLevelLinking>true</FunctionLevelLinking>
++      <IntrinsicFunctions>true</IntrinsicFunctions>
++      <SDLCheck>true</SDLCheck>
++      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <ConformanceMode>true</ConformanceMode>
++    </ClCompile>
++    <Link>
++      <SubSystem>Console</SubSystem>
++      <EnableCOMDATFolding>true</EnableCOMDATFolding>
++      <OptimizeReferences>true</OptimizeReferences>
++      <GenerateDebugInformation>true</GenerateDebugInformation>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemGroup>
++    <ClInclude Include="fundamentals.h" />
++  </ItemGroup>
++  <ItemGroup>
++    <ClCompile Include="fundamentalsV1.c" />
++    <ClCompile Include="main.c" />
++    <ClCompile Include="test_fundamentals.c" />
++  </ItemGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
++  <ImportGroup Label="ExtensionTargets">
++  </ImportGroup>
++</Project>
+\ No newline at end of file
+diff --git a/CP4P/CP4P.vcxproj.filters b/CP4P/CP4P.vcxproj.filters
+new file mode 100644
+index 0000000..7e1fc66
+--- /dev/null
++++ b/CP4P/CP4P.vcxproj.filters
+@@ -0,0 +1,33 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemGroup>
++    <Filter Include="Source Files">
++      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
++      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
++    </Filter>
++    <Filter Include="Header Files">
++      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
++      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
++    </Filter>
++    <Filter Include="Resource Files">
++      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
++      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
++    </Filter>
++  </ItemGroup>
++  <ItemGroup>
++    <ClInclude Include="fundamentals.h">
++      <Filter>Header Files</Filter>
++    </ClInclude>
++  </ItemGroup>
++  <ItemGroup>
++    <ClCompile Include="fundamentalsV1.c">
++      <Filter>Source Files</Filter>
++    </ClCompile>
++    <ClCompile Include="test_fundamentals.c">
++      <Filter>Source Files</Filter>
++    </ClCompile>
++    <ClCompile Include="main.c">
++      <Filter>Source Files</Filter>
++    </ClCompile>
++  </ItemGroup>
++</Project>
+\ No newline at end of file
+diff --git a/CP4P/CP4P.vcxproj.user b/CP4P/CP4P.vcxproj.user
+new file mode 100644
+index 0000000..88a5509
+--- /dev/null
++++ b/CP4P/CP4P.vcxproj.user
+@@ -0,0 +1,4 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <PropertyGroup />
++</Project>
+\ No newline at end of file
+
+commit df18a99b41cfa99da4c7b1ef176685bd903ee2c0
+Author: John De Appolonia <jde-appolonia@myseneca.ca>
+Date:   Tue Dec 5 18:24:28 2023 -0500
+
+    version_1
+
+diff --git a/CP4P/fundamentals.h b/CP4P/fundamentals.h
+new file mode 100644
+index 0000000..ce71c90
+--- /dev/null
++++ b/CP4P/fundamentals.h
+@@ -0,0 +1,15 @@
++// FUNDAMENTALS MODULE HEADER
++#ifndef _FUNDAMENTALS_H_
++#define _FUNDAMENTALS_H_
++
++#include <stdio.h> // Standard input / output header.
++#include <stdlib.h> // Standard library header, general purpose functions and dynamic memory allocation.
++#include <string.h> // String manipulation header.
++
++// Function to index a character in a string
++char indexString(const char* buffer, size_t position);
++
++// Main function to demonstrate fundamentals
++void fundamentals(void);
++
++#endif // !_FUNDAMENTALS_H_
+diff --git a/CP4P/fundamentalsV1.c b/CP4P/fundamentalsV1.c
+new file mode 100644
+index 0000000..baff304
+--- /dev/null
++++ b/CP4P/fundamentalsV1.c
+@@ -0,0 +1,79 @@
++// FUNDAMENTALS MODULE SOURCE
++
++// Define preprocessor directives to suppress warnings
++#define _CRT_SECURE_NO_WARNINGS
++
++#define BUFFER_SIZE    80
++#define NUM_INPUT_SIZE 10
++
++#include "fundamentals.h"
++
++// Function used for unit testsing to retrieve a character from a string at a specified position
++char indexString(const char* buffer, size_t position) {
++    // Check if the specified position is beyond the length of the string
++    if (position >= strlen(buffer)) {
++        // Adjust the position to the last index of the string
++        position = strlen(buffer) - 1;
++        printf("Error: Position Too Big\n");
++    }
++    // Return the character at the specified position
++    return buffer[position];
++}
++
++// Main function for demonstrating the fundamentals of indexing strings
++void fundamentals(void) {
++
++    // Version 1 (V1) of the function
++
++    printf("*** Start of Indexing Strings Demo ***\n");
++
++    // Declare variables for input buffer, number input, and position
++    char buffer1[BUFFER_SIZE];
++    char numInput[NUM_INPUT_SIZE];
++    size_t position;
++
++    // (loop for user interaction)
++    do {
++        // Prompt the user to enter a string
++        printf("Type not empty string (q - to quit):\n");
++        // Read user input into the buffer
++        fgets(buffer1, BUFFER_SIZE, stdin);
++        // Remove the newline character at the end of the input
++        buffer1[strlen(buffer1) - 1] = '\0';
++
++        // Check if the user input is not 'q'
++        if (strcmp(buffer1, "q") != 0) {
++            // Prompt the user to input a position within the string
++            printf("Type the character position within the string:\n");
++            // Read user input for the position
++            fgets(numInput, NUM_INPUT_SIZE, stdin);
++            // Remove the newline character at the end of the input
++            numInput[strlen(numInput) - 1] = '\0';
++            // Convert the input into an integer that represents the position
++            position = atoi(numInput);
++
++            // Check if the position is beyond the length of the string
++            if (position >= strlen(buffer1)) {
++                // Adjust the position to the last index of the string
++                position = strlen(buffer1) - 1;
++                printf("Too big... Position reduced to max. available\n");
++            }
++
++            printf("The character found at %d position is \'%c\'\n", (int)position, buffer1[position]);
++        }
++    } while (strcmp(buffer1, "q") != 0);  // Continue the loop until the user inputs 'q'
++    printf("*** End of Indexing Strings Demo ***\n\n");
++
++    // V2
++    //printf("*** Start of Measuring Strings Demo ***\n");
++    //char buffer2[BUFFER_SIZE];
++    //do {
++    //    printf("Type a string (q - to quit):\n");
++    //    fgets(buffer2, BUFFER_SIZE, stdin);
++    //    buffer2[strlen(buffer2) - 1] = '\0';
++    //    if (strcmp(buffer2, "q") != 0)
++    //        printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
++    //} while (strcmp(buffer2, "q") != 0);
++
++    printf("*** End of Measuring Strings Demo ***\n\n");
++}
+diff --git a/CP4P/main.c b/CP4P/main.c
+new file mode 100644
+index 0000000..524fafc
+--- /dev/null
++++ b/CP4P/main.c
+@@ -0,0 +1,13 @@
++#include "fundamentals.h"
++
++int main() {
++
++    //Run the program
++    fundamentals();
++
++    // Run the unit test
++    //test_indexString();
++    //printf("Unit test passed!\n");
++
++    return 0;
++}
+\ No newline at end of file
+diff --git a/CP4P/test_fundamentals.c b/CP4P/test_fundamentals.c
+new file mode 100644
+index 0000000..d1577b3
+--- /dev/null
++++ b/CP4P/test_fundamentals.c
+@@ -0,0 +1,47 @@
++#include "fundamentals.h"
++
++// Unit test for the indexString function for V1
++void test_indexString() {
++    // Test case 1
++    char buffer1[] = "Hello";
++    size_t position1 = 3;
++    printf("Testing indexString('%s', %zu): Result = '%c'\n", buffer1, position1, indexString(buffer1, position1));
++
++    // Test case 2
++    char buffer2[] = "World123";
++    size_t position2 = 0;
++    printf("Testing indexString('%s', %zu): Result = '%c'\n", buffer2, position2, indexString(buffer2, position2));
++
++    // Test case 3
++    char buffer3[] = "12345";
++    size_t position3 = 1;
++    printf("Testing indexString('%s', %zu): Result = '%c'\n", buffer3, position3, indexString(buffer3, position3));
++
++    // Test case 4
++    char buffer4[] = "Test";
++    size_t position4 = 8;
++    // intentionally overloaded for testing
++    printf("Testing indexString('%s', %zu): Result = Invalid Position\n", buffer4, position4, indexString(buffer4, position4));
++
++    // Test case 5
++    char buffer5[] = "";
++    size_t position5 = 3;
++    printf("Testing indexString('%s', %zu): Result = '%c', Invalid Position\n", buffer5, position5, indexString(buffer5, position5));
++
++    // Test case 6
++    char buffer6[] = "*%@";
++    size_t position6 = 0;
++    printf("Testing indexString('%s', %zu): Result = '%c'\n", buffer6, position6, indexString(buffer6, position6));
++
++    // Test case 7
++    char buffer7[] = "-12";
++    size_t position7 = 2;
++    printf("Testing indexString('%s', %zu): Result = '%c'\n", buffer7, position7, indexString(buffer7, position7));
++
++    // Test case 8
++    char buffer8[] = "a";
++    size_t position8 = -1;
++    printf("Testing indexString('%s', %zu): Result = '%c', Invalid Position\n", buffer8, position8, indexString(buffer8, position8));
++
++}
++

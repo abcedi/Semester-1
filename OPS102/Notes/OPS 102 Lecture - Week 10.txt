@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "hello $USER
+
+if [ $PWD = $HOME ]
+then
+	echo "Welcome Home!"
+else
+	echo " You might be lost! Use 'cd ~' o get back home"
+fi
+
+echo $? - check the exit point/error message
+0 means successfull
+1 means it could not be found
+
+#!/bin/bash 
+
+echo -n "Is everthing ok? (y/n)"
+read response
+
+if [ $response = "y" ] 
+then
+	echo "Good to hear"
+else
+	echo "sound like an error!"
+fi
+
+exit 22 // changes the exit number
+echo "$! = 22

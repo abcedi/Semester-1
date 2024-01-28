@@ -1,0 +1,93 @@
+=================================
+===TESTING TOKENIZING FUNCTION===
+=================================
+*** Start of Tokenizing Word DEMO ***
+Type a few words separated by space (q - to quit):
+t
+Word #1 is 't'
+Type a few words separated by space (q - to quit):
+Testing
+Word #1 is 'Testing'
+Type a few words separated by space (q - to quit):
+Testing words in put.
+Word #1 is 'Testing'
+Word #2 is 'words'
+Word #3 is 'in'
+Word #4 is 'put.'
+Type a few words separated by space (q - to quit):
+Testing 3 words input S ...
+Word #1 is 'Testing'
+Word #2 is '3'
+Word #3 is 'words'
+Word #4 is 'input'
+Word #5 is 'S'
+Word #6 is '...'
+Type a few words separated by space (q - to quit):
+
+Type a few words separated by space (q - to quit):
+
+Type a few words separated by space (q - to quit):
+q
+*** End of Tokenizing words DEMO ***
+
+*** Start of Tokenizing Phrases DEMO ***
+Type a few phrases separated by comma (q - to quit):
+Testing time with phrases counter
+Phrase #1 is 'Testing time with phrases counter'
+Type a few phrases separated by comma (q - to quit):
+Tesing time, with phrases counter
+Phrase #1 is 'Tesing time'
+Phrase #2 is ' with phrases counter'
+Type a few phrases separated by comma (q - to quit):
+Hi, Tesing time, with phrases counter,
+Phrase #1 is 'Hi'
+Phrase #2 is ' Tesing time'
+Phrase #3 is ' with phrases counter'
+Type a few phrases separated by comma (q - to quit):
+,
+Type a few phrases separated by comma (q - to quit):
+,,,,,
+Type a few phrases separated by comma (q - to quit):
+,,testing,,,
+Phrase #1 is 'testing'
+Type a few phrases separated by comma (q - to quit):
+
+Type a few phrases separated by comma (q - to quit):
+q
+*** End of Tokenizing Phrases DEMO ***
+
+*** Start of Tokenizing Sentences DEMO ***
+Type a few sentences separated by dot (q - to quit);
+Hi, Testing time with phrases counter, In CPR101 PROJECT
+Sentence #1 is 'Hi, Testing time with phrases counter, In CPR101 PROJECT'
+Type a few sentences separated by dot (q - to quit);
+Hi, Testing time with phrases counter. In CPR101 PROJECT
+Sentence #1 is 'Hi, Testing time with phrases counter'
+Sentence #2 is ' In CPR101 PROJECT'
+Type a few sentences separated by dot (q - to quit);
+Hi, Testing time with phrases counter. In CPR101 PROJECT. This is version 3.
+Sentence #1 is 'Hi, Testing time with phrases counter'
+Sentence #2 is ' In CPR101 PROJECT'
+Sentence #3 is ' This is version 3'
+Type a few sentences separated by dot (q - to quit);
+.
+Type a few sentences separated by dot (q - to quit);
+......
+Type a few sentences separated by dot (q - to quit);
+.,.. .test..a.Hi. I am testing.
+Sentence #1 is ','
+Sentence #2 is ' '
+Sentence #3 is 'test'
+Sentence #4 is 'a'
+Sentence #5 is 'Hi'
+Sentence #6 is ' I am testing'
+Type a few sentences separated by dot (q - to quit);
+
+Type a few sentences separated by dot (q - to quit);
+q
+*** End of Tokenizing Senrences DEMO ***
+
+
+D:\Seneca\Semester1\CPR101\Project\Tokenizing\x64\Debug\Torkenizing.exe (process 5040) exited with code 0.
+To automatically close the console when debugging stops,enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

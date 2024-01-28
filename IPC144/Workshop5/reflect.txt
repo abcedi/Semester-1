@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Abcedi Ilacas
+Student ID#: 138180211
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. 
+
+Using variables and macros with descriptive names makes the code more readable and self-explanatory. 
+In this workshop, instead of checking if a year is between 2012 and 2022, we used MIN_YEAR and MAX_YEAR. 
+This makes it clear that we're validating against minimum and maximum allowable years without having to remember or deduce what those specific years are. 
+
+If there's a need to change a value in the future, we just have to update the variable or macro in one place. 
+In this workshop, if the range of allowable years changes, we can easily update MIN_YEAR and MAX_YEAR without having to comb through the entire code for every hardcoded instance. 
+
+Hardcoding values, especially when they are used multiple times, increases the risk of introducing errors. 
+If a hardcoded value needs to be changed and is missed in one place, it can introduce bugs. By using variables and macros, we ensure consistency throughout the code. 
+For example, if the number of log days changed from 3 to a different value, updating the LOG_DAYS macro ensures that all dependent logic automatically adapts to this new value. 
+
+2. 
+
+By keeping validation and summation/averaging logic separate, we ensure that each part of the code has a distinct purpose. 
+This makes the code easier to understand, debug, and maintain. 
+In this workshop, validation focuses on ensuring that each input value is within the expected range. 
+Once all values are validated and stored, then we can be confident in our summation and averaging calculations without having to mix concerns. 
+
+If we were to include summation within the validation loop, we'd be recalculating the sum and average with every single input, which is redundant and inefficient. 
+By separating the two processes, we ensure that summation and averaging are performed just once, after all inputs have been validated and collected. 
+This design choice in the workshop minimizes unnecessary calculations, making the program run faster and more efficiently. 
+
+ 

@@ -1,0 +1,14 @@
+In line number 104 of your output:
+The output should be:
+ERROR: Character must be one of [yn]: y
+^
+But your output is: 
+Patient record has been removed!
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [E] ASCII code(69)
+but you printed
+  [P] ASCII code(80)
+

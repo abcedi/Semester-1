@@ -1,0 +1,76 @@
+/*/////////////////////////////////////////////////////////////////////////
+//                          Workshop - #3 Reflection
+//Full Name  : Abcedi Ilacas
+//Student ID#: 138180211
+//Email      : ailacas1@myseneca.ca
+//Section    : NBB
+//Authenticity Declaration:
+//I declare this submission is the result of my own work and has not been
+//shared with any other student or 3rd party content provider. This submitted
+//piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+1)
+printf(" 1|       %d         |      %d      |   %d   | \n", (coffee_strenght == coffee1_type || coffee_strenght == (coffee1_type + ('a' - 'A')) || coffee_strenght + ('a' - 'A') == coffee1_type), daily_servings >= 1 && daily_servings <= 4, ((cream_preference == 'Y' || cream_preference == 'y') && (coffee1_cream == 'Y' || coffee1_cream == 'y')) || ((cream_preference == 'N' || cream_preference == 'n') && (coffee1_cream == 'N' || coffee1_cream == 'n')));
+printf(" 2|       %d         |      %d      |   %d   | \n", (coffee_strenght == coffee2_type || coffee_strenght == (coffee2_type + ('a' - 'A')) || coffee_strenght + ('a' - 'A') == coffee2_type), daily_servings >= 5 && daily_servings <= 9, ((cream_preference == 'Y' || cream_preference == 'y') && (coffee2_cream == 'Y' || coffee2_cream == 'y')) || ((cream_preference == 'N' || cream_preference == 'n') && (coffee2_cream == 'N' || coffee2_cream == 'n')));
+printf(" 3|       %d         |      %d      |   %d   | \n", (coffee_strenght == coffee3_type || coffee_strenght == (coffee3_type + ('a' - 'A')) || coffee_strenght + ('a' - 'A') == coffee3_type), daily_servings >= 10, ((cream_preference == 'Y' || cream_preference == 'y') && (coffee3_cream == 'Y' || coffee3_cream == 'y')) || ((cream_preference == 'N' || cream_preference == 'n') && (coffee3_cream == 'N' || coffee3_cream == 'n')));
+
+A) Relational Expressions: 
+
+1. `coffee_strenght == coffee1_type` - compares the coffee strength preference with the coffee type. 
+2. `coffee_strenght == (coffee1_type + ('a' - 'A'))` - checks if the coffee strength is equal to the coffee type (case insensitive). 
+3. `coffee_strenght + ('a' - 'A') == coffee1_type` - another check for case insensitivity. 
+4. `daily_servings >= 1` - checks if the daily servings are greater than or equal to 1. 
+5. `daily_servings <= 4` - checks if the daily servings are less than or equal to 4. 
+6. `cream_preference == 'Y'` and `cream_preference == 'y'` - checks for the cream preference. 
+7. `coffee1_cream == 'Y'` and `coffee1_cream == 'y'` - checks if coffee1 is best served with cream. 
+8. `cream_preference == 'N'` and `cream_preference == 'n'` - checks for no cream preference. 
+9. `coffee1_cream == 'N'` and `coffee1_cream == 'n'` - checks if coffee1 is not best served with cream. 
+
+B) Logical Expressions: 
+
+1. `||` (OR) - used to combine multiple conditions:  
+   - `coffee_strenght == coffee1_type || coffee_strenght == (coffee1_type + ('a' - 'A')) || coffee_strenght + ('a' - 'A') == coffee1_type` 
+   - `cream_preference == 'Y' || cream_preference == 'y'` 
+   - `coffee1_cream == 'Y' || coffee1_cream == 'y'` 
+   - `cream_preference == 'N' || cream_preference == 'n'` 
+   - `coffee1_cream == 'N' || coffee1_cream == 'n'` 
+
+2. `&&` (AND) - used to ensure all conditions are met: 
+   - `daily_servings >= 1 && daily_servings <= 4` 
+   - `((cream_preference == 'Y' || cream_preference == 'y') && (coffee1_cream == 'Y' || coffee1_cream == 'y'))` 
+   - `((cream_preference == 'N' || cream_preference == 'n') && (coffee1_cream == 'N' || coffee1_cream == 'n'))` 
+
+2)
+
+I used two relational expressions (product3_id != product1_id and product3_id != product2_id) and one logical expression (&&). I checked if product3_id is not equal to product1_id and product3_id is not equal to product2_id. 
+
+(product3_id != product1_id) && (product3_id != product2_id) is the method I used and it isnt DeMorgan’s Law. Another method I could use that would also give the correct answer is !((product3_id == product1_id) || (product3_id == product2_id)) which is DeMorgan’s Law. 
+
+
+3)
+
+A) Another way I could have organized and optimized my variables is using 'char' and 'int' for all variables making it only 2 lines:
+
+	char coffee1_type, coffee2_type, coffee3_type, coffee1_cream, coffee2_cream, coffee3_cream;
+
+	int coffee1_weight, coffee2_weight, coffee3_weight;
+
+B) Also another way I could have organized and optimized my variables is to group them for each coffee type(1-3) and add comments for clarity and readability
+  
+    // Declare coffee 1 variables 
+    char coffee1_type; 
+    int coffee1_weight; 
+    char coffee1_cream; 
+
+    // Declare coffee 2 variables 
+    char coffee2_type; 
+    int coffee2_weight; 
+    char coffee2_cream; 
+
+    // Declare coffee 3 variables 
+    char coffee3_type; 
+    int coffee3_weight; 
+    char coffee3_cream; 
+
+  

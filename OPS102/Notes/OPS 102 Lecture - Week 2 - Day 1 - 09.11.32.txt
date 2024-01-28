@@ -1,0 +1,82 @@
+OPS102 NDM | Saso Kocev | Day 1 Week 2 
+command prompt (windows):
+uses backslashes
+dir - shows folders
+cd - change to directory
+.. - go back one level
+cls - clear screen
+quser - shows people connected to the server
+del - deleted file
+copy -
+
+Linux CLI (putty):
+uses front slashes
+ls - shows folders
+ls -l - shows longer version with file formats
+ls -a - shows all folders with all information and hidden files
+pwd - shows exact location
+cd - change directory
+.. - goes back to one level behind ex: cd /../../.. or cd /../dowloads
+mkdir - make directory (need to name it)
+touch - makes a file (need to name it)
+echo - say somthing back
+nano - opens text editor (like notepad in windows)
+pico - opens text editor (nano is better version/update)
+cat - opens text and can only read it not edit
+cp - copy ex: cp fillet (file name) hotdog (new file name for the copy)
+diff - spots the difference of the files
+diff -y - shows them side by side
+cal - calendar ex. cal 1 2023 (januar 2020)
+date - shows time of the server 
+who - shows who is connected to the server
+w - more information to who
+w - show the people connected to the computer
+whoami - shows your username
+clear - clears screen but you can scroll up to show previous command type clear again to erase everything
+root dir - only admistrator, root of the linux
+home dir - regular users
+~ - represents home directory
+tree - shows all the files into a tree diagram
+tree -C - shows the heirarcy (capital C for colors)
+	- blue (directory), white (file), green (executable file), light blue 	(shortcuts), red (broken link), pink (pictures)
+
+
+- you can't skip folders, you need to go one by one
+- but you can type it all at once by typing cd /home/ammendoza2
+- another shortcut is to type cd ~ and it goes back your homecd  
+
+ls -l --sort time
+ls -l --sort size
+
+
+when there is a slash /in cd to indicate that it is a directory
+
+you can go down quickly if you know the absolute address example cd /bin but only from the top of the hierarcy going down
+
+absolute path - complete address
+relative to home path - ~ to home
+
+ask about relative and absolute path? Answer absolute always start at the root and relative always where you are currently at
+
+cp ~/ndm/homework/lab1 ~/ndm/homework/thursday/lab2
+if you dont name it in the final line then it will take the same file name as the original
+
+cp -r - to copy directory and everything inside
+mv - rename file mv file1 file2
+mv - moving file1 homework/file1
+. - current directory
+rm - remove files
+rm -r - remove directory
+rmdir - removes empty directories
+
+you can have multiple file with the same name but different capitalizations
+
+how can you differenciate renaming and moving in linux?
+
+
+
+
+
+
+
+

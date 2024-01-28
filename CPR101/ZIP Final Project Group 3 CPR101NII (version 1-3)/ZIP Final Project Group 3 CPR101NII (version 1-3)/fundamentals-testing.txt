@@ -1,0 +1,119 @@
+*** Start of Indexing Strings Demo ***
+Type not empty string (q - to quit):
+Hello
+Type the character position within the string:
+3
+The character found at 3 position is 'l'
+Type not empty string (q - to quit):
+World123
+Type the character position within the string:
+0
+The character found at 0 position is 'W'
+Type not empty string (q - to quit):
+12345
+Type the character position within the string:
+1
+The character found at 1 position is '2'
+Type not empty string (q - to quit):
+Test
+Type the character position within the string:
+8
+Too big... Position reduced to max. available
+The character found at 3 position is 't'
+Type not empty string (q - to quit):
+
+Type the character position within the string:
+3
+Too big... Position reduced to max. available
+The character found at -1 position is '╠'
+Type not empty string (q - to quit):
+a
+Type the character position within the string:
+-1
+Too big... Position reduced to max. available
+The character found at 0 position is 'a'
+Type not empty string (q - to quit):
+abc
+Type the character position within the string:
+%
+The character found at 0 position is 'a'
+Type not empty string (q - to quit):
+-12
+Type the character position within the string:
+2
+The character found at 2 position is '2'
+Type not empty string (q - to quit):
+Hello
+Type the character position within the string:
+q
+The character found at 0 position is 'H'
+Type not empty string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the character position within the string:
+The character found at 0 position is 'a'
+Type not empty string (q - to quit):
+*%@
+Type the character position within the string:
+0
+The character found at 0 position is '*'
+Type not empty string (q - to quit):
+q
+*** End of Indexing Strings Demo ***
+
+*** Start of Measuring Strings Demo ***
+Type a string (q - to quit):
+Hello
+The length of 'Hello' is 5 characters
+Type a string (q - to quit):
+Hello123
+The length of 'Hello123' is 8 characters
+Type a string (q - to quit):
+-12.3
+The length of '-12.3' is 5 characters
+Type a string (q - to quit):
+@#$
+The length of '@#$' is 3 characters
+Type a string (q - to quit):
+
+The length of '' is 0 characters
+Type a string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+The length of 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' is 78 characters
+Type a string (q - to quit):
+The length of 'a' is 1 characters
+Type a string (q - to quit):
+q
+*** End of Measuring Strings Demo ***
+
+*** Start of Copying Strings Demo ***
+Destination string is reset to empty
+Type the source string (q - to quit):
+Test
+New destination string is 'Test'
+Destination string is reset to empty
+Type the source string (q - to quit):
+Test123
+New destination string is 'Test123'
+Destination string is reset to empty
+Type the source string (q - to quit):
+@#$%
+New destination string is '@#$%'
+Destination string is reset to empty
+Type the source string (q - to quit):
+-12
+New destination string is '-12'
+Destination string is reset to empty
+Type the source string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+New destination string is 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Destination string is reset to empty
+Type the source string (q - to quit):
+New destination string is 'a'
+Destination string is reset to empty
+Type the source string (q - to quit):
+
+New destination string is ''
+Destination string is reset to empty
+Type the source string (q - to quit):
+q
+*** End of Copying Strings Demo ***

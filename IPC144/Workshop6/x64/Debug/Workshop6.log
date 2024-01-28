@@ -1,0 +1,4 @@
+﻿  w6p2.c
+E:\IPC144\Workshop6\w6p2.c(133,31): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\IPC144\Workshop6\w6p2.c(175,39): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Workshop6.vcxproj -> E:\IPC144\Workshop6\x64\Debug\Workshop6.exe

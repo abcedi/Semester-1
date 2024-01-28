@@ -1,0 +1,62 @@
+OPS102 | Saso Kocev | Week 4 - Day 1 - 09.25.23
+
+quiz #3: based on wildcards, compare to files, replace tex in files, text readers.
+
+how to replace file again? mv command? tr command
+
+commands:
+file filename - shows file format.
+
+symbolic
+Permissions 
+r = Read - see
+w = Write - change
+x = Execute - run
+d = directory
+
+ls -l - shows permissions
+you will see: -rw-r--r--(rwxrwxrwx) saso.kocev users  (first dash could be file type)
+the first three dashes is the permissions of the user - saso.kocev
+the second three sets dashes is the groups related to the user and allowed by the user - users
+last set of three dashes is the people outside the group or others
+
+commands:
+chmod - or chmod + - add and remove commands
+example: chmod -w file - removes write permission
+chmod -r - removes all permission
+
+x - could be only used in executable programs but it could still be used in regular files and gives them executable permissions and changes its color.
+
++w = default gives it to user
++r and +x = gives it to everyone
+
+to give permssions to specific people:
+u = user
+g = group
+o = others
+a = all
+example: chmod o-r - removes read for the others
+
+you can give or remove multple types of permission to a group
+example: chmod u+rwx - gives read, write, execute to user only.
+
+you cna also give and remove in the same line:
+chmod o-r,o+w file - removes read and add write permission on file
+or chmod o-r,o+wx or chmod o-r,o+w,o+x file
+
+chmod arg1 arg2
+chmod +r file
+DONT put spaces on the argument 1 instead put a comma
+
+you can also combine permission with wildcards
+chmod o-x,o+rx file*
+
+you can also combine this when giving or removing permissions for specific:
+chmod g-o-x,o+rx file*
+or chmod g-r,o+r file* or chmod go-r file or chmod ugo+rwx file
+
+if your going to use ugo for specific then just use a
+chmod a-r file
+
+= - set symbol, it turns on only that specific permission (shortcut)
+example: chmod g=rw filr - only turn on read and write for the group section

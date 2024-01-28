@@ -1,0 +1,53 @@
+OPS102 | Week 8 | 10-30-2023
+
+What is an absolute path?
+
+my answer:
+	Path from /root to destination
+
+actual answer:
+	Path from the filesystem root to the destination
+
+Which of the following filenames identifies as a hidden file in Linux?
+
+my answer:
+	~/bashrc.hid
+
+actual answer:
+	~/.bashrc (the . makes it hidden)
+
+What is the primary purpose of 'pipe' in CLI?
+
+my answer:
+	To create another process
+
+actual answer:
+	To pass the output of one command as input to another
+
+You currently have multiple nano processes running. Terminate all of them without finding their PID
+
+answer:
+	pkill -nano
+
+actual answer:
+	pkill nano
+
+In Linux, what is the superuser account called?
+
+my answer:
+	admin
+
+actual answer:
+	root
+
+
+
+
+
+
+
+
+
+
+
+

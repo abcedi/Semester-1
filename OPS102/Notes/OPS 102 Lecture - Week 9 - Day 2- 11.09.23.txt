@@ -1,0 +1,70 @@
+#!/bin/bash
+
+animal=dog
+
+echo "The currrent animal is: $animal"
+
+echo "Change the animal to something else: "
+read animal
+
+echo "The new animal is: $animal"
+
+echo "bye"
+
+
+read // pauses the file
+read animal // waits for input to update the value of animal variable
+read // reads the space as well
+
+echo -n "Change the animal to something else: "
+read animal
+
+-n // makes the scanf statement in the same line
+
+read -p "Update animal: " animal
+
+-p // shows prompt, like a printf command before scanf
+
+#!bin/bash
+
+echo "The first argument is: $1"
+echo "The second argument is: $2"
+echo "The fifth argument is: $5"
+echo "The nineth argument is: $9"
+echo "The tenth argument is: $10"
+
+echo " total number of arguments: $#"
+
+$# Total number of arguments
+
+#!/bin/bash
+
+echo "The currrent animal is: $animal"
+
+echo "Change the animal to something else: "
+read animal
+
+echo "The new animal iss: $animal"
+
+echo "bye"
+
+// its fine to not declare a variable, because read animal creates the variable and assigns them
+
+#!/bin/bash
+
+echo "The total number of arguments: $#"
+
+if [ $# = 1 ] //put space in the square brackets
+then
+	echo "The argument passsed from the user is $1"
+fi
+
+if [ $# = 2 ] //put space in the square brackets
+then
+	echo "The argument passsed from the user is $1 and $2"
+fi
+
+echo "bye
+
+
+

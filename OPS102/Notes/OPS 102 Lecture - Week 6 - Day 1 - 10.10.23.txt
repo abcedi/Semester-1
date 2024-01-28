@@ -1,0 +1,56 @@
+review for quiz 3:
+
+tr "a-z" "A-Z < linux.txt
+
+cat linux.txt | tr "a-z" "A-Z"
+
+head not heads
+tail not tails
+
+? one character
+* everything after or before the file
+
+Search a file called linux.txt for any lines containing the word 'matrix'
+grep "matrix" linux.txt
+
+ignores cases searches for uppercase and lowercase
+grep -i "matrix" linux.txt
+
+review for quiz 4:
+
+7. Using octal permissions change the file permissions for a file called linux.txt
+User read and write
+Group read and execute
+Others nothing
+
+my answer:
+chmod 650
+
+chmod 650 linux.txt (dont forget the file at the end)
+
+4. You are friend is worried that anyone can access his homework.txt file. Using symbolic set permissions, advise your friend a command that will only give permissions for this file to himself (read and edit). Nobody else should access this file in any way. 
+The file should only give him permissions to read and make changes to the file.
+
+my answer:
+chmod u=rw
+
+chmod u=rw,g=,o= homework.txt
+chmod u=rw,go= homework.txt
+
+chmod u+rwx,g+rw,g-x,o+r,o-wx linux.txt
+chmod u+rwx,g+rw-x,o+r-wx linux.txt
+
+
+9. Search for a file name called matrix in the /home directory, and export all error messages to a file called errors.txt
+my answer:
+ls /home/matrix > errors.txt
+
+find /home -name "matrix" 2> error.txt
+
+'2' works with error messages, means error message also goes to the file rather than displaying in the screen
+find finds file burried under many directories ls only in current directory
+
+question 2
+
+Command:
+umask [binary numbers] - changes permissions of the newly created files

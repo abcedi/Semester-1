@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : Abcedi Ilacas
+Student ID#: 138180211
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Importance of Code Formatting
+
+In my coding process, I’ve found that clear code formatting is crucial for various reasons. 
+For readability, proper indentation, spacing, and consistent naming conventions make the code more readable. It helps in distinguishing between different blocks of code, especially in constructs like loops and conditions. 
+For debugging, a well-formatted code aids in identifying and rectifying errors more quickly. When each logic part is neatly organized, it's easier to pinpoint where something might be going wrong. 
+For maintenance, future modifications become simpler when the code is clean. Anyone who might be revisiting the code, be it the original coder or a new developer, will find it easier to understand and modify. 
+For the iteration and selection logic parts, I ensured to use meaningful variable names that indicate their purpose. 
+I also consistently indent nested blocks to visually represent the code hierarchy.
+I separate logical blocks with blank lines for better visual clarity. 
+
+2. Impact of No Nesting 
+
+Without the ability to nest logic, the complexity and length of our code would increase dramatically. We would end up repeating a lot of code. For instance, if we had to check multiple conditions in sequence, we couldn't have inner conditions or loops inside outer ones. 
+This would mean replicating a lot of the logic multiple times. Also, nested structures often represent hierarchical or dependent relationships in logic. Without nesting, representing these dependencies would become complicated. 
+The program might need to run through many more checks and operations than necessary, as we couldn't efficiently group and order operations within nested structures. 
+ 
+3. Using "if" vs. "if/else if"
+
+When requiring a user to input a value between 1 and 5, and each value has unique logic.
+Using a series of "if" statements would be inefficient because even if an early "if" condition is met, all subsequent "if" conditions will still be checked. This is wasteful, especially when we know only one condition can be true. 
+Using "if" repeatedly can be misleading. It might give the impression that multiple conditions can be true simultaneously, which isn't the case here. 
+With "if/else if", once a true condition is met, the rest are skipped, making it more efficient. 
+Using "if/else if" makes it clear that only one of the conditions will be met, and once that condition is found, the rest are skipped, optimizing the flow and execution. 
+
+ 

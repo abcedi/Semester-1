@@ -1,0 +1,35 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Abcedi Ilacas
+Student ID#: 138180211
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Benefits and Drawbacks of Functions Returning Values in Two Ways 
+
+Benefit: One clear benefit of designing functions that return values both via arguments and directly through the return statement is flexibility. This dual approach allows for greater adaptability in different programming scenarios. For instance, if I need the result of a function immediately, I can use its return value. Alternatively, if I want to store the result for later use without an additional variable assignment, I can use the argument-passing feature. This flexibility can make the code more readable and versatile in different contexts. 
+
+Drawback: However, this design can introduce unnecessary complexity and potential confusion. Having functions operate in two ways might make it less clear to other programmers (or even to me at a later date) how exactly the function is supposed to be used. It can also lead to errors, for example, if the pointer argument is inadvertently passed as NULL, or if the return value is ignored when it shouldn't be. This dual approach can also make the function's implementation more complex and harder to maintain. 
+
+2. Cohesion and Coupling in Functions 
+
+Function with Less Than Perfect Cohesion: The function calculateReportData could demonstrate less than perfect cohesion. This function is tasked with calculating several different pieces of data related to a report, such as servings, cost per serving, and cost per calorie. This multifaceted functionality means the function is doing more than one basic task, thereby reducing its cohesion. 
+
+Improvement: To improve cohesion, I would break down calculateReportData into smaller functions, each handling a specific aspect of the report. For example, one function could calculate servings, another could determine cost per serving, and so on. This modular approach would make each function more focused and easier to maintain. 
+
+Function with Coupling that Could be Improved: The displayReportData function demonstrates a level of coupling that could be improved. It directly uses the ReportData structure and also a flag to indicate if a product is the cheapest. This design tightly couples the function to the specific structure of ReportData and the logic to determine the cheapest product. 
+
+Improvement: To reduce coupling, I would refactor the function to accept more generalized parameters instead of a direct ReportData structure. This way, the function becomes more flexible and can be used in contexts beyond just displaying report data. For determining the cheapest product, a separate function could be used, further decoupling the display logic from the business logic. 
+
+3. Advantages of Passing Structures to Functions and Efficiency Improvement 
+
+Advantages: Passing structures to functions is advantageous because it allows grouping related data together, making the function call more organized and the function itself more comprehensible. It also helps in maintaining consistency, as all related data is passed in a single entity. 
+
+Efficiency Improvement: One way to improve efficiency when passing structures to functions is to pass them by reference rather than by value. Passing by reference avoids the overhead of copying the entire structure, which can be particularly beneficial for large structures. 
+
+Improvement in displayCatFoodData Function: Currently, if displayCatFoodData takes individual fields of a structure as separate parameters, it could be improved by modifying it to accept a reference to a CatFoodInfo structure. This change would make the function call cleaner and the function itself easier to manage, especially if the structure is expanded in the future. Additionally, passing by reference would be more efficient than passing each field individually by value. 

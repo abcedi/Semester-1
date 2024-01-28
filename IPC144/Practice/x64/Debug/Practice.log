@@ -1,0 +1,4 @@
+﻿  practice.c
+E:\IPC144\Practice\practice.c(11,12): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 1 has type 'int *'
+E:\IPC144\Practice\practice.c(11,12): warning C4313: 'printf': '%x' in format string conflicts with argument 1 of type 'int *'
+  Practice.vcxproj -> E:\IPC144\Practice\x64\Debug\Practice.exe

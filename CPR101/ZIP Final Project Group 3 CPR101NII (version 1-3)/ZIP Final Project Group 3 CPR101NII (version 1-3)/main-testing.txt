@@ -1,0 +1,312 @@
+-----------------------------
+Choose your desired function:
+-----------------------------
+1 - Fundamentals
+2 - Manipulation
+3 - Converting
+4 - Tokenizing
+0 - Exit
+Which module to run? 1
+*** Start of Indexing Strings Demo ***
+Type not empty string (q - to quit):
+
+Type the character position within the string:
+3
+Too big... Position reduced to max. available
+The character found at -1 position is '╠'
+Type not empty string (q - to quit):
+Hello
+Type the character position within the string:
+3
+The character found at 3 position is 'l'
+Type not empty string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the character position within the string:
+The character found at 0 position is 'a'
+Type not empty string (q - to quit):
+q
+*** End of Indexing Strings Demo ***
+
+*** Start of Measuring Strings Demo ***
+Type a string (q - to quit):
+
+The length of '' is 0 characters
+Type a string (q - to quit):
+Hello
+The length of 'Hello' is 5 characters
+Type a string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+The length of 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' is 78 characters
+Type a string (q - to quit):
+The length of 'a' is 1 characters
+Type a string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+The length of 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' is 78 characters
+Type a string (q - to quit):
+The length of 'aa' is 2 characters
+Type a string (q - to quit):
+q
+*** End of Measuring Strings Demo ***
+
+*** Start of Copying Strings Demo ***
+Destination string is reset to empty
+Type the source string (q - to quit):
+
+New destination string is ''
+Destination string is reset to empty
+Type the source string (q - to quit):
+Test
+New destination string is 'Test'
+Destination string is reset to empty
+Type the source string (q - to quit):
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+New destination string is 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Destination string is reset to empty
+Type the source string (q - to quit):
+New destination string is 'a'
+Destination string is reset to empty
+Type the source string (q - to quit):
+q
+*** End of Copying Strings Demo ***
+
+-----------------------------
+Choose your desired function:
+-----------------------------
+1 - Fundamentals
+2 - Manipulation
+3 - Converting
+4 - Tokenizing
+0 - Exit
+Which module to run? 2
+*** Start of Concatenating Strings Demo ***
+Type the 1st string (q - to quit):
+a
+Type the 2nd string:
+b
+Concatenated string is 'ab'
+Type the 1st string (q - to quit):
+Ashton
+Type the 2nd string:
+Seneca
+Concatenated string is 'AshtonSeneca'
+Type the 1st string (q - to quit):
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string:
+Concatenated string is 'Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Type the 1st string (q - to quit):
+q
+*** End of Concatenating Strings Demo ***
+
+ *** Start of Comparing Strings Demo ***
+Type the 1st string to compare (q - to quit) :
+
+Type the 2nd string to compare:
+
+'' string is equal to ''
+Type the 1st string to compare (q - to quit) :
+animal
+Type the 2nd string to compare:
+zebra
+'animal' string is less than 'zebra'
+Type the 1st string to compare (q - to quit) :
+animal
+Type the 2nd string to compare:
+animal
+'animal' string is equal to 'animal'
+Type the 1st string to compare (q - to quit) :
+dog
+Type the 2nd string to compare:
+cat
+'dog' string is greater than 'cat'
+Type the 1st string to compare (q - to quit) :
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Type the 2nd string to compare:
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' string is equal to 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+Type the 1st string to compare (q - to quit) :
+q
+ *** End of Comparing Strings Demo ***
+
+ *** Start of Searching Strings Demo ***
+Type the string (q - to quit) :
+a
+Type the substring:
+a
+'a' found at 0 position
+Type the string (q - to quit) :
+I am a Seneca Student
+Type the substring:
+Seneca
+'Seneca' found at 7 position
+Type the string (q - to quit) :
+I am a Seneca Student
+Type the substring:
+S
+'S' found at 7 position
+Type the string (q - to quit) :
+I deserve an A+
+Type the substring:
+yes
+Not found
+Type the string (q - to quit) :
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+Type the substring:
+'' found at 0 position
+Type the string (q - to quit) :
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+Type the substring:
+b
+'b' found at 77 position
+Type the string (q - to quit) :
+q
+ *** End of Searching Strings Demo ***
+
+-----------------------------
+Choose your desired function:
+-----------------------------
+1 - Fundamentals
+2 - Manipulation
+3 - Converting
+4 - Tokenizing
+0 - Exit
+Which module to run? 3
+*** Start of Converting Strings to int Demo ***
+Type an int numeric string (q - to quit) :
+1
+Converted number is 1
+Type an int numeric string (q - to quit) :
+100
+Converted number is 100
+Type an int numeric string (q - to quit) :
+1000000000000000000000000000000000000000000000000000000000000000000000000000000
+Converted number is 2147483647
+Type an int numeric string (q - to quit) :
+Converted number is 0
+Type an int numeric string (q - to quit) :
+q
+*** End of Converting Strings to int Demo ***
+
+*** Start of Converting Strings to double Demo ***
+Type the double numeric string (q - to quit) :
+
+Converted number is 0.000000
+Type the double numeric string (q - to quit) :
+123
+Converted number is 123.000000
+Type the double numeric string (q - to quit) :
+0.123
+Converted number is 0.123000
+Type the double numeric string (q - to quit) :
+123.123
+Converted number is 123.123000
+Type the double numeric string (q - to quit) :
+179769000000000006323030492138942643493033036433685336215410983289126434148906289940615299632196609445533816320312774433484859900046491141051651091672734470972759941382582304802812882753059262973637182942535982636884444611376868582636745405553206881859340916340092953230149901406738427651121855107737424232448
+Converted number is 179769000000000015498663339657659567501880155421838066154115486805301519187968.000000
+Type the double numeric string (q - to quit) :
+Converted number is 899406152996321935590978956111632819587958926902401172468268154785092429938688.000000
+Type the double numeric string (q - to quit) :
+Converted number is 275994138258230500663858895020004488715546776998003155319804393124305896996864.000000
+Type the double numeric string (q - to quit) :
+Converted number is 405553206881859340532508122453225921934144683900200578378355768685494272.000000
+Type the double numeric string (q - to quit) :
+q
+*** End of Converting Strings to double Demo ***
+
+*** Start of Converting Strings to long Demo ***
+Type the long numeric string (q - to quit) :
+-2147483648
+Converted number is -2147483648
+Type the long numeric string (q - to quit) :
+100
+Converted number is 100
+Type the long numeric string (q - to quit) :
+10.49
+Converted number is 10
+Type the long numeric string (q - to quit) :
+1
+Converted number is 1
+Type the long numeric string (q - to quit) :
+2222222222222222222222222222222222222222222222222222222222222222222222222222222
+Converted number is 2147483647
+Type the long numeric string (q - to quit) :
+Converted number is 0
+Type the long numeric string (q - to quit) :
+q
+*** End of Converting Strings to long Demo ***
+
+-----------------------------
+Choose your desired function:
+-----------------------------
+1 - Fundamentals
+2 - Manipulation
+3 - Converting
+4 - Tokenizing
+0 - Exit
+Which module to run? 4
+*** Start of Tokenizing Word DEMO ***
+Type a few words separated by space (q - to quit):
+
+Type a few words separated by space (q - to quit):
+Testing words in put.
+Word #1 is 'Testing'
+Word #2 is 'words'
+Word #3 is 'in'
+Word #4 is 'put.'
+Type a few words separated by space (q - to quit):
+Testing 3 words input S …
+Word #1 is 'Testing'
+Word #2 is '3'
+Word #3 is 'words'
+Word #4 is 'input'
+Word #5 is 'S'
+Word #6 is '.'
+Type a few words separated by space (q - to quit):
+q
+*** End of Tokenizing words DEMO ***
+
+*** Start of Tokenizing Phrases DEMO ***
+Type a few phrases separated by comma (q - to quit):
+
+Type a few phrases separated by comma (q - to quit):
+Tesing time, with phrases counter
+Phrase #1 is 'Tesing time'
+Phrase #2 is ' with phrases counter'
+Type a few phrases separated by comma (q - to quit):
+Hi, Tesing time, with phrases counter,
+Phrase #1 is 'Hi'
+Phrase #2 is ' Tesing time'
+Phrase #3 is ' with phrases counter'
+Type a few phrases separated by comma (q - to quit):
+q
+*** End of Tokenizing Phrases DEMO ***
+
+*** Start of Tokenizing Sentences DEMO ***
+Type a few sentences separated by dot (q - to quit);
+
+Type a few sentences separated by dot (q - to quit);
+Hi, Testing time with phrases counter. In CPR101 PROJECT. This is version 3.
+Sentence #1 is 'Hi, Testing time with phrases counter'
+Sentence #2 is ' In CPR101 PROJECT'
+Sentence #3 is ' This is version 3'
+Type a few sentences separated by dot (q - to quit);
+.,.. .test..a.Hi. I am testing.
+Sentence #1 is ','
+Sentence #2 is ' '
+Sentence #3 is 'test'
+Sentence #4 is 'a'
+Sentence #5 is 'Hi'
+Sentence #6 is ' I am testing'
+Type a few sentences separated by dot (q - to quit);
+q
+*** End of Tokenizing Sentences DEMO ***
+
+-----------------------------
+Choose your desired function:
+-----------------------------
+1 - Fundamentals
+2 - Manipulation
+3 - Converting
+4 - Tokenizing
+0 - Exit
+Which module to run? 0
+
