@@ -1,0 +1,117 @@
+1. Start 
+
+2. Initialize green to 45 seconds
+
+3. Initialize advanced_left_green to 15 seconds 
+
+4. Initialize advanced_left_amber 5 seconds 
+
+5. Initialize amber to 10 seconds 
+
+6. Initialize red to (green + amber) seconds
+
+7. Initialize car_sensor, pedestrian_button to FALSE
+
+8. Initialize last_state, current_state
+
+9. Set current_state to ADVANCED LEFT GREEN
+
+ 
+
+10. Define interrupt_detected():
+
+	a) Check for any external interrupt signals 
+
+	b) Return True if interrupt is present, else Return False 
+
+  
+
+11. Define interruption(): 
+
+	a) Set all lights based on specific interrupt pattern (flash amber or flash red) 
+
+	b) Wait until interrupt is cleared 
+
+  
+
+12. While system is On 
+
+	13. If interrupt_detected():
+ 
+		a) Set current_state to last_state
+
+        	b) interruption() 
+
+        	c) Continue from last_state before interrupt 
+
+    	14. End If 
+
+	15. Initialize car_count to 0
+
+	16. If current_state is RED:
+
+		a) If car_sensor is TRUE:
+		
+			i) Increment car_count
+			
+			ii) If car_count >=5:
+			
+				i) If red > 10 seconds:
+			
+					- Set RED to 10 seconds
+		
+				ii) Else If red <=10 seconds:
+			
+					- Do not reduce RED time
+
+				iii) Reset car_sensor and car_count to FALSE and 0
+
+
+		b) If pedestrian_button is TRUE:
+		
+			i) If red > 10 seconds:
+			
+				- Set RED to 10 seconds
+		
+			ii) Else If red <=10 seconds:
+			
+				- Do not reduce RED time
+
+			iii) Reset pedestrian_button to FALSE
+
+     
+	17. If current_state is ADVANCED LEFT GREEN: 
+
+        	a) Turn on ADVANCED LEFT GREEN light for advanced_left_green and RED light for (advanced_left_green + advanced_left_amber)
+
+        	b) Set current_state to ADVANCED GREEN AMBER
+
+    	18. Else If current_state is ADVANCED LEFT AMBER: 
+
+        	a) Turn on ADVANCED GREEN AMBER light for advanced_left_amber 
+
+        	b) Set current_state to GREEN
+
+    	19. Else If current_state is GREEN: 
+
+        	a) Turn on GREEN light for green 
+
+        	b) Set current_state to AMBER
+
+    	20. Else If current_state is AMBER: 
+
+        	a) Turn on AMBER light for amber 
+
+        	b) Set current_state to RED 
+
+    	21. Else If current_state is RED: 
+
+        	a) Turn on RED light for red 
+
+        	b) Set current_state to GREEN 
+
+    	22. End If 
+
+23. End While 
+
+24. End

@@ -1,0 +1,63 @@
+1. Start 
+
+2. Initialize green to 40 seconds 
+
+3. Initialize amber to 15 seconds 
+
+4. Initialize red to (green + amber) seconds
+
+5. Set current_state to GREEN 
+
+ 
+
+6. Define interrupt_detected(): 
+
+      a) Check for any external interrupt signals 
+
+      b) Return True if interrupt is present, else Return False 
+
+  
+
+7. Define interruption(): 
+
+      a) Set all lights based on specific interrupt pattern (flash amber or flash red) 
+
+      b) Wait until interrupt is cleared 
+
+  
+
+8. While system is On 
+
+    9. If interrupt_detected(): 
+
+        a) interruption() 
+
+        b) Continue from last state before interrupt 
+
+    10. End If 
+
+     
+
+    11. If current_state is GREEN: 
+
+        a) Turn on GREEN light for green 
+
+        b) Set current_state to AMBER 
+
+    12. Else If current_state is AMBER: 
+
+        a) Turn on AMBER light for amber 
+
+        b) Set current_state to RED 
+
+    13. Else If current_state is RED: 
+
+        a) Turn on RED light for red 
+
+        b) Set current_state to GREEN 
+
+    14. End If 
+
+15. End While 
+
+16. End

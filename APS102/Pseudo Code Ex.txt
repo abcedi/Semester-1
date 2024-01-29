@@ -1,0 +1,11 @@
+1. Start
+2. Prompt user to enter cake size
+3. Store to ck_size
+4. Prompt user to enter icing type
+5. Store to ic_type
+6. If ck_size = small			//Nested If (If within if)
+	a) Set basic_price = 10
+	b) If ic_type = "Regular"
+		a. basic_price = basic_price + 3
+	c) If ic_type = "Fondent"
+		a. basic_price = basic_price + 5

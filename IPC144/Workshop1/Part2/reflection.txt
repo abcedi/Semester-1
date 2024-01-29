@@ -1,0 +1,22 @@
+*****************************************************************************
+ 			Workshop - #1 Reflection
+Full Name : Abcedi Ilacas
+Student ID#: 138180211
+Email : ailacas1@myseneca.ca
+Section : NBB
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+Reflection 
+
+
+1) I have very little programming experience. The only experience in coding I've had was in a high school course. In this class, I learned basic Python coding. The final and biggest program I made was a database to store data of any desired topic. For my database I chose to store data on The Top 50 NBA Players Of All Time. I enjoyed computer science in high school, and it was the reason why I chose this program in college. I find writing C interesting as it seems like a versatile and overall better language. 
+
+  
+2) The compiling process turning C text file into an executable program is still new to me as this is the only class I've learned it in. I understand it converts human readable code into the machines language code which the computer can understand and execute. With putty.exe, running the compile command checks for any error first and then translates it into an executable program. 
+
+  
+3) For IPC144, I am aiming to gain as much knowledge as I can about the C language. I know if I master this language, it will give me a better understanding of the other computer programming subjects and languages. A goal I have is to understand advanced syntax and apply them to create complex programs. I plan on becoming an efficient programmer as it will help me later on in my career. I want to create various programs that I am going be proud of. 
